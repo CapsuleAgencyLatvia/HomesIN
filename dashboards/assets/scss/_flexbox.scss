@@ -1,0 +1,326 @@
+/**
+ * Breakpoints
+ *
+ * https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+**/
+@mixin resp($size) {
+    @if ( $size == 'l' ) {
+        @media (max-width: 1199px) {
+            @content;
+        }
+    }
+    @if ( $size == 'm' ) {
+        @media (max-width: 899px) {
+            @content;
+        }
+    }
+    @if ( $size == 's' ) {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+}
+
+@include resp('l') {
+    .l-none {
+        display: none;
+    }
+}
+
+@include resp('m') {
+    .m-none {
+        display: none;
+    }
+}
+
+@include resp('s') {
+    .s-none {
+        display: none;
+    }
+}
+
+.contain,
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contain {
+    max-width: 1200px;
+}
+
+.flexbox {
+    margin: 0 -1rem;
+    .col {
+        padding: 1rem;
+    }
+}
+
+.flexbox-full {
+    margin: 0;
+    .col {
+        padding: 0;
+    }
+}
+
+.flexbox,
+.flexbox-full {
+    display: flex;
+    flex-wrap: wrap;
+    &.hc {
+        justify-content: center;
+    }
+    &.he {
+        justify-content: flex-end;
+    }
+    &.vc {
+        align-items: center;
+    }
+    &.ve {
+        align-items: flex-end;
+    }
+    &.hsb {
+        justify-content: space-between;
+    }
+    &.dir-rev {
+        flex-direction: row-reverse;
+    }
+    &.dir-col {
+        flex-direction: column;
+    }
+}
+
+.col {
+    &.fill {
+        flex: 1;
+    }
+    &.m-left {
+        margin-left: auto;
+    }
+    &.m-right {
+        margin-right: auto;
+    }
+    &.col-1 {
+        width: 10%;
+    }
+    &.col-2 {
+        width: 20%;
+    }
+    &.col-25 {
+        width: 25%;
+    }
+    &.col-3 {
+        width: 30%;
+    }
+    &.col-33 {
+        width: 33.33%;
+    }
+    &.col-35 {
+        width: 35%;
+    }
+    &.col-4 {
+        width: 40%;
+    }
+    &.col-45 {
+        width: 45%;
+    }
+    &.col-5 {
+        width: 50%;
+    }
+    &.col-55 {
+        width: 55%;
+    }
+    &.col-6 {
+        width: 60%;
+    }
+    &.col-65 {
+        width: 65%;
+    }
+    &.col-66 {
+        width: 66.66%;
+    }
+    &.col-7 {
+        width: 70%;
+    }
+    &.col-75 {
+        width: 75%;
+    }
+    &.col-8 {
+        width: 80%;
+    }
+    &.col-9 {
+        width: 90%;
+    }
+    &.col-full {
+        width: 100%;
+    }
+    @include resp('l') {
+        &.l-none {
+            width: 100%;
+        }
+        &.l-fill {
+            flex: 1;
+        }
+        &.l-1 {
+            width: 10%;
+        }
+        &.l-2 {
+            width: 20%;
+        }
+        &.l-25 {
+            width: 25%;
+        }
+        &.l-3 {
+            width: 30%;
+        }
+        &.l-33 {
+            width: 33.33%;
+        }
+        &.l-4 {
+            width: 40%;
+        }
+        &.l-45 {
+            width: 45%;
+        }
+        &.l-5 {
+            width: 50%;
+        }
+        &.l-55 {
+            width: 55%;
+        }
+        &.l-6 {
+            width: 60%;
+        }
+        &.l-66 {
+            width: 66.66%;
+        }
+        &.l-7 {
+            width: 70%;
+        }
+        &.l-75 {
+            width: 75%;
+        }
+        &.l-8 {
+            width: 80%;
+        }
+        &.l-9 {
+            width: 90%;
+        }
+        &.l-full {
+            width: 100%;
+        }
+    }
+
+    @include resp(m) {
+        &.m-none {
+            width: 100%;
+        }
+        &.m-fill {
+            flex: 1;
+        }
+        &.m-1 {
+            width: 10%;
+        }
+        &.m-2 {
+            width: 20%;
+        }
+        &.m-25 {
+            width: 25%;
+        }
+        &.m-3 {
+            width: 30%;
+        }
+        &.m-33 {
+            width: 33.33%;
+        }
+        &.m-4 {
+            width: 40%;
+        }
+        &.m-45 {
+            width: 45%;
+        }
+        &.m-5 {
+            width: 50%;
+        }
+        &.m-55 {
+            width: 55%;
+        }
+        &.m-6 {
+            width: 60%;
+        }
+        &.m-66 {
+            width: 66.66%;
+        }
+        &.m-7 {
+            width: 70%;
+        }
+        &.m-75 {
+            width: 75%;
+        }
+        &.m-8 {
+            width: 80%;
+        }
+        &.m-9 {
+            width: 90%;
+        }
+        &.m-full {
+            width: 100%;
+        }
+    }
+    @include resp(s) {
+        &.s-none {
+            width: 100%;
+        }
+        &.s-fill {
+            flex: 1;
+        }
+        &.s-1 {
+            width: 10%;
+        }
+        &.s-2 {
+            width: 20%;
+        }
+        &.s-25 {
+            width: 25%;
+        }
+        &.s-3 {
+            width: 30%;
+        }
+        &.s-33 {
+            width: 33.33%;
+        }
+        &.s-4 {
+            width: 40%;
+        }
+        &.s-45 {
+            width: 45%;
+        }
+        &.s-5 {
+            width: 50%;
+        }
+        &.s-55 {
+            width: 55%;
+        }
+        &.s-6 {
+            width: 60%;
+        }
+        &.s-66 {
+            width: 66.66%;
+        }
+        &.s-7 {
+            width: 70%;
+        }
+        &.s-75 {
+            width: 75%;
+        }
+        &.s-8 {
+            width: 80%;
+        }
+        &.s-9 {
+            width: 90%;
+        }
+        &.s-full {
+            width: 100%;
+        }
+    }
+}
