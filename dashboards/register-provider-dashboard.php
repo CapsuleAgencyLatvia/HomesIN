@@ -84,14 +84,17 @@ include_once('modules/sidebar.php'); ?>
                 array(
                     'heading' => 'Requiring attention',
                     'value' => 11,
+                    'status' => 'error',
                 ),
                 array(
                     'heading' => 'In Progress',
                     'value' => 14,
+                    'status' => 'notification',
                 ),
                 array(
                     'heading' => 'All properties',
                     'value' => 102,
+                    'status' => 'notification',
                 ),
             ); ?>
             <div class="flexbox blocks">
@@ -101,7 +104,7 @@ include_once('modules/sidebar.php'); ?>
                         <div class="block">
                             <div class="head">
                                 <p class="heading"><?php echo $block['heading']; ?></p>
-                                <div class="count">
+                                <div class="count <?php echo $block['status']; ?>">
                                     <p><?php echo $block['value']; ?></p>
                                 </div>
                             </div>
