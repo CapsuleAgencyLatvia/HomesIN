@@ -16,6 +16,7 @@ $dark-blue: #0059c2;
 
 $lightest-gray: #e1e1e1;
 
+$text-light: #94979b;
 $text: #b5b7bb;
 
 
@@ -61,7 +62,9 @@ $text: #b5b7bb;
         }
         p {
             margin: 0;
+            font-size: .9em;
             padding-left: .5rem;
+            font-weight: $light;
         }
     }
     .logo-wrapper {
@@ -70,9 +73,28 @@ $text: #b5b7bb;
             height: 2rem;
         }
     }
-    .search-toggle {
-        display: inline-flex;
+    .search-wrapper {
+        display: flex;
         align-items: center;
+        .search {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            .icon {
+                height: 1rem;
+            }
+        }
+        .input {
+            color: $text-light;
+            padding: .5rem;
+            border: none;
+            outline: none;
+            font-weight: $light;
+            &::placeholder {
+                color: $text-light;
+            }
+        }
     }
     .user-wrapper {
         .user {

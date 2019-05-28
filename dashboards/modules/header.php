@@ -27,10 +27,12 @@
         <div class="container">
             <div class="flexbox vc">
                 <div class="col">
-                    <button class="icon-wrapper search-toggle">
-                        <img class="icon lazy" data-src="/global/assets/img/search.svg" alt="">
-                        <p>Search</p>
-                    </button>
+                    <form class="icon-wrapper search-wrapper">
+                        <button class="search" type="submit">
+                            <img class="icon lazy" data-src="/global/assets/img/search.svg" alt="">
+                        </button>
+                        <input class="input" type="text" name="" value="" placeholder="Search">
+                    </form>
                 </div>
                 <div class="col m-left">
                     <button class="icon-wrapper user-add">
