@@ -3,18 +3,45 @@
 **/
 $(document).ready(function(){
     /**
-     * Header
+     * Header Login and overlay forms
     **/
-    var headerLogginWrapper = $('#header .loggin-wrapper');
-    var loginFormOverlay = $('.login-form-overlay');
-    headerLogginWrapper.find('.toggle-choices').on('click', function(){
-        $(this).toggleClass('active');
-        headerLogginWrapper.find('.choices').toggleClass('active');
+    var formOverlay = $('.form-overlay');
+    var headerLoginWrapper = $('#header .loggin-wrapper');
+    var loginFormOverlay = $('#login-form');
+    var registerFormOverlay = $("#register-form");
+
+    // Close overlay
+    formOverlay.find('.close-form').on('click', function(){
+        formOverlay.fadeOut();
     });
-    headerLogginWrapper.find('.choice').on('click', function() {
-        headerLogginWrapper.find('.toggle-choices').removeClass('active');
-        headerLogginWrapper.find('.choices').removeClass('active');
+    $(document).mouseup(function(e){
+        var container = formOverlay.find('.content');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            formOverlay.fadeOut();
+        }
+    });
+
+    // Toggle choices
+    headerLoginWrapper.find('.toggle-choices').on('click', function(){
+        $(this).toggleClass('active');
+        headerLoginWrapper.find('.choices').toggleClass('active');
+    });
+    // Toggle login form
+    headerLoginWrapper.find('.choice').on('click', function() {
+        var choice = $(this).attr('data-choice');
+        var userType = $(this).attr('data-user-type');
+
+        loginFormOverlay.find('.type').text(choice);
+        loginFormOverlay.find('input[name="user-type"]').val(userType);
+
+        headerLoginWrapper.find('.toggle-choices').removeClass('active');
+        headerLoginWrapper.find('.choices').removeClass('active');
         loginFormOverlay.fadeIn();
+    });
+    // Toggle register form
+    loginFormOverlay.find('.sign-up-toggle').on('click', function(){
+        loginFormOverlay.hide();
+        registerFormOverlay.fadeIn();
     });
 });
 

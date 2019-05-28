@@ -194,7 +194,7 @@ section {
 /**
  * Login form
 **/
-.login-form-overlay {
+.form-overlay {
     display: none;
     position: fixed;
     z-index: 100;
@@ -209,9 +209,28 @@ section {
         align-items: center;
         justify-content: center;
         .content {
+            position: relative;
             padding: 3rem 4rem;
             border-radius: .5rem;
             background-color: white;
+            .close-wrapper {
+                position: absolute;
+                z-index: 1;
+                top: 2rem;
+                left: 2rem;
+                .close-form {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    box-shadow: 0 0 1rem 0 rgba(black,.1);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
             .head {
                 text-align: center;
                 padding-bottom: 2rem;
@@ -231,6 +250,30 @@ section {
                 }
             }
             .form {
+                .heading {
+                    margin: 0;
+                    font-weight: $bold;
+                }
+                .flexbox {
+                    margin: 0 -.75rem;
+                    .col {
+                        padding: .75rem;
+                    }
+                }
+                &.login {
+                    .field-wrapper {
+                        .input {
+                            min-width: 35rem;
+                        }
+                    }
+                }
+                &.register {
+                    .field-wrapper {
+                        .input {
+                            min-width: 20rem;
+                        }
+                    }
+                }
                 .field-wrapper {
                     padding: .75rem 0;
                     &:first-of-type {
@@ -240,10 +283,30 @@ section {
                         padding-bottom: 0;
                     }
                     .input {
-                        width: 35rem;
+                        width: 100%;
                         padding: 1rem;
                         border: 1px solid $gray;
                         border-radius: .25rem;
+                        outline: none;
+                        transition: all .25s ease;
+                        &::placeholder {
+                            color: $text-dark;
+                            transition: all .25s ease;
+                        }
+                        &:focus {
+                            border-color: black;
+                            &::placeholder {
+                                color: black;
+                            }
+                        }
+                    }
+                    .select {
+                        padding: 1rem 0;
+                        border: none;
+                        color: $text-darkest;
+                        border-radius: 0;
+                        border-bottom: 1px solid $gray;
+                        font-size: 1.5em;
                     }
                     .btn {
                         width: 100%;
