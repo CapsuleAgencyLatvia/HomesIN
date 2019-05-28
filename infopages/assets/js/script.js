@@ -43,18 +43,7 @@ $(document).ready(function(){
         loginFormOverlay.hide();
         registerFormOverlay.fadeIn();
     });
-});
 
-/**
- * Loaded page
-**/
-$(window).on('load', function(){
-    /**
-     * LazyLoad
-    **/
-    var lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazy"
-    });
 
     /**
      * Homepage slider
@@ -68,4 +57,16 @@ $(window).on('load', function(){
             }, 2000);
         });
     }
+});
+
+/**
+ * Loaded page
+**/
+$(window).on('load', function(){
+    /**
+     * LazyLoad
+    **/
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+    });
 });
