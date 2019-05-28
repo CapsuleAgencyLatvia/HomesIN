@@ -15,25 +15,25 @@ include_once('modules/sidebar.php'); ?>
                 array(
                     'data' => '£ 3.864',
                     'percentage' => 6.2,
-                    'heading' => 'KPI Vacancy Filled',
+                    'title' => 'KPI Vacancy Filled',
                     'trend' => 'positive',
                 ),
                 array(
                     'data' => 628,
                     'percentage' => 5.5,
-                    'heading' => 'Occupied Property',
+                    'title' => 'Occupied Property',
                     'trend' => 'positive',
                 ),
                 array(
                     'data' => 716,
                     'percentage' => 1.5,
-                    'heading' => 'In progress',
+                    'title' => 'In progress',
                     'trend' => 'positive',
                 ),
                 array(
                     'data' => '1,287',
                     'percentage' => 4.7,
-                    'heading' => 'All properties',
+                    'title' => 'All properties',
                     'trend' => 'negative',
                 ),
             ); ?>
@@ -52,7 +52,7 @@ include_once('modules/sidebar.php'); ?>
                                     <p><span class="percentage"><?php echo $block['percentage']; ?></span>%</p>
                                 </div>
                             </div>
-                            <h3 class="heading"><?php echo $block['heading']; ?></h3>
+                            <h3 class="heading"><?php echo $block['title']; ?></h3>
                         </div>
                     </div>
                     <?php
@@ -81,21 +81,9 @@ include_once('modules/sidebar.php'); ?>
             </div>
             <?php
             $blocks = array(
-                array(
-                    'heading' => 'Requiring attention',
-                    'value' => 11,
-                    'status' => 'error',
-                ),
-                array(
-                    'heading' => 'In Progress',
-                    'value' => 14,
-                    'status' => 'notification',
-                ),
-                array(
-                    'heading' => 'All properties',
-                    'value' => 102,
-                    'status' => 'notification',
-                ),
+                array('title' => 'Requiring attention','value' => 11,'status' => 'error',),
+                array('title' => 'In Progress','value' => 14,'status' => 'notification',),
+                array('title' => 'All properties','value' => 102,'status' => 'notification',),
             ); ?>
             <div class="flexbox blocks">
                 <?php
@@ -103,7 +91,7 @@ include_once('modules/sidebar.php'); ?>
                     <div class="col col-33">
                         <div class="block">
                             <div class="head">
-                                <p class="heading"><?php echo $block['heading']; ?></p>
+                                <p class="heading"><?php echo $block['title']; ?></p>
                                 <div class="count <?php echo $block['status']; ?>">
                                     <p><?php echo $block['value']; ?></p>
                                 </div>
@@ -124,40 +112,28 @@ include_once('modules/sidebar.php'); ?>
             <div class="head">
                 <h2 class="heading">Add Property</h2>
             </div>
+            <?php
+            $blocks = array(
+                array('title' => 'Submit New Vacancy','button' => 'Submit'),
+                array('title' => 'Bulk upload','button' => 'Upload'),
+                array('title' => 'Search','button' => 'Search'),
+            ); ?>
             <div class="blocks flexbox">
-                <div class="col col-33">
-                    <div class="block">
-                        <div class="head">
-                            <p>Submit New Vacancy</p>
-                        </div>
-                        <div class="content">
-                            <img src="" alt="">
-                            <a class="btn btn-blue" href="#">Submit</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-33">
-                    <div class="block">
-                        <div class="head">
-                            <p>Bulk upload</p>
-                        </div>
-                        <div class="content">
-                            <img src="" alt="">
-                            <a class="btn btn-blue" href="#">Upload</a>
+                <?php
+                foreach ( $blocks as $block ) : ?>
+                    <div class="col col-33">
+                        <div class="block">
+                            <div class="head">
+                                <p><?php echo $block['title']; ?></p>
+                            </div>
+                            <div class="content">
+                                <img src="" alt="">
+                                <a class="btn btn-blue" href="#"><?php echo $block['button']; ?></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col col-33">
-                    <div class="block">
-                        <div class="head">
-                            <p>Search</p>
-                        </div>
-                        <div class="content">
-                            <img src="" alt="">
-                            <a class="btn btn-blue" href="#">Upload</a>
-                        </div>
-                    </div>
-                </div>
+                    <?php
+                endforeach; ?>
             </div>
         </div>
     </div>
