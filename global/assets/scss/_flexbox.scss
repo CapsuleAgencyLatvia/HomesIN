@@ -49,17 +49,17 @@
     max-width: 1200px;
 }
 
-.flexbox {
-    margin: 0 -1rem;
-    .col {
-        padding: 1rem;
-    }
-}
-
 .flexbox-full {
     margin: 0;
     .col {
         padding: 0;
+    }
+}
+
+.flexbox {
+    margin: 0 -1rem;
+    .col {
+        padding: 1rem;
     }
 }
 
@@ -102,6 +102,9 @@
     }
     &.col-1 {
         width: 10%;
+    }
+    &.col-15 {
+        width: 15%;
     }
     &.col-2 {
         width: 20%;
@@ -148,6 +151,9 @@
     &.col-8 {
         width: 80%;
     }
+    &.col-85 {
+        width: 85%;
+    }
     &.col-9 {
         width: 90%;
     }
@@ -163,6 +169,9 @@
         }
         &.l-1 {
             width: 10%;
+        }
+        &.l-15 {
+            width: 15%;
         }
         &.l-2 {
             width: 20%;
@@ -203,6 +212,9 @@
         &.l-8 {
             width: 80%;
         }
+        &.l-85 {
+            width: 85%;
+        }
         &.l-9 {
             width: 90%;
         }
@@ -220,6 +232,9 @@
         }
         &.m-1 {
             width: 10%;
+        }
+        &.m-15 {
+            width: 15%;
         }
         &.m-2 {
             width: 20%;
@@ -260,6 +275,9 @@
         &.m-8 {
             width: 80%;
         }
+        &.m-85 {
+            width: 85%;
+        }
         &.m-9 {
             width: 90%;
         }
@@ -276,6 +294,9 @@
         }
         &.s-1 {
             width: 10%;
+        }
+        &.s-15 {
+            width: 15%;
         }
         &.s-2 {
             width: 20%;
@@ -315,6 +336,9 @@
         }
         &.s-8 {
             width: 80%;
+        }
+        &.s-85 {
+            width: 85%;
         }
         &.s-9 {
             width: 90%;
