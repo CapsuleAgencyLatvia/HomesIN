@@ -127,6 +127,22 @@ $(document).ready(function() {
     sidebar.find('.toggle-search-overlay').on('click', function() {
         searchOverlay.fadeIn();
     });
+
+    /**
+     * Refine properies
+    **/
+    var refine = $('#refine');
+    if ( refine.length ) {
+        refine.find('.toggle-overlay').on('click', function(){
+            refine.find('.overlay').toggleClass('active');
+        });
+        $(document).mouseup(function(e){
+            var container = refine.find('.refine-wrappper');
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                refine.find('.overlay').removeClass('active');
+            }
+        });
+    }
 });
 
 /**

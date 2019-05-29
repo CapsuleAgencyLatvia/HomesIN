@@ -21,6 +21,7 @@ $gray: #d8d8d8;
 
 $text-light: #94979b;
 $text: #b5b7bb;
+$text-dark: #818181;
 $text-darkest: #343434;
 
 
@@ -31,6 +32,10 @@ $text-darkest: #343434;
     display: inline-block;
     padding: 1rem 3rem;
     text-transform: uppercase;
+    &.btn-small {
+        font-size: .6em;
+        padding: .75rem 2rem;
+    }
     &.btn-blue {
         font-size: .8em;
         color: white;
@@ -42,6 +47,12 @@ $text-darkest: #343434;
         color: white;
         border-radius: .5rem;
         background-color: $yellow;
+    }
+    &.btn-gray {
+        color: black;
+        border-radius: .25rem;
+        border: 1px solid $gray;
+        background-color: $light-gray;
     }
 }
 
@@ -134,7 +145,7 @@ $text-darkest: #343434;
             }
             .input {
                 color: $text-light;
-                padding: .5rem;
+                padding: .25rem;
                 border: none;
                 outline: none;
                 font-weight: $light;
@@ -191,7 +202,7 @@ $text-darkest: #343434;
         height: 0px;
     }
     .user-type {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
         text-align: center;
         p {
             font-weight: $regular;
@@ -463,7 +474,7 @@ $text-darkest: #343434;
 /**
  * Search Form
 **/
-#rp-search-form {
+#search-form {
     .form {
         padding: .25rem;
         border-radius: .1rem;
@@ -515,7 +526,7 @@ $text-darkest: #343434;
     }
 }
 
-#rp-filter-form {
+#filter-form {
     .nav-menu {
         display: flex;
         align-items: center;
@@ -545,6 +556,136 @@ $text-darkest: #343434;
         }
     }
     .form {
+        .flexbox {
+            margin: 0 -.25rem;
+            .col {
+                padding: 0 .25rem;
+            }
+        }
+        .heading {
+            padding-right: 1.75rem;
+        }
+        .filter-wrapper {
+            .icon {
+                img {
+                    width: 1rem;
+                }
+            }
+            .overlay {
+                display: none;
+            }
+        }
+    }
+}
 
+#refine {
+    padding-top: 1rem;
+    .refine-wrappper {
+        position: relative;
+        .overlay {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 2rem;
+            right: -1rem;
+            padding: 1.5rem 1rem;
+            min-width: 16rem;
+            border-radius: .25rem;
+            background-color: white;
+            box-shadow: 0 0 1rem 0 $gray;
+            transition: all .5s ease;
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                top: 3rem;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                bottom: 100%;
+                right: 1rem;
+                border: .5rem solid transparent;
+                border-bottom-color: white;
+            }
+            .heading {
+                color: $text;
+                font-size: .6em;
+                margin: 0;
+                padding-bottom: 1.25rem;
+            }
+            .choices {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                .choice {
+                    padding: .5rem 0;
+                    .icon-wrapper {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            object-fit: contain;
+                        }
+                        span {
+                            font-weight: $regular;
+                            padding-left: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Property in grid
+**/
+.property-wrapper {
+    padding: 1rem 0;
+    .property {
+        border-radius: .25rem;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 0 0 5px 0 $light-gray;
+        .image-wrapper {
+            height: 22.5rem;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .content {
+            position: relative;
+            padding: 2rem;
+            height: 100%;
+            .location {
+                color: $text-dark;
+                font-size: .8em;
+                font-weight: $medium;
+                margin: 0;
+            }
+            .title {
+                font-size: 1.25em;
+                font-weight: $medium;
+                padding: .75rem 0;
+                margin: 0;
+            }
+            .distance {
+                color: $blue;
+                font-size: .8em;
+                font-weight: $medium;
+                margin: 0;
+            }
+            .description {
+                padding: 1rem 0;
+                margin: 0;
+                font-size: .8em;
+                color: $text-dark;
+                line-height: 1.5;
+            }
+        }
     }
 }
