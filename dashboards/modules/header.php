@@ -10,7 +10,7 @@
     <div class="left">
         <div class="flexbox vc hsb">
             <div class="col">
-                <a class="logo-wrapper" href="/">
+                <a class="logo-wrapper" href="/dashboards/rp-dashboard.php">
                     <img class="logo lazy" data-src="" alt="">
                 </a>
             </div>

@@ -5,7 +5,7 @@
     <?php
     $blocks = array(
         array('heading' => 'Home', 'items' => array(
-            array('title' => 'Dashboard','url' => '/dashboards/register-provider-dashboard.php'),
+            array('title' => 'Dashboard','url' => '/dashboards/rp-dashboard.php'),
             array('title' => 'Search','url' => '')
         )),
         array('heading' => 'Property', 'items' => array(
