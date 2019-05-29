@@ -29,7 +29,7 @@
         <div class="container">
             <div class="flexbox vc">
                 <div class="col">
-                    <form class="icon-wrapper search-wrapper">
+                    <form class="icon-wrapper search-wrapper" action="/dashboards/rp-search-results.php">
                         <button class="search" type="submit">
                             <img class="icon lazy" data-src="/global/assets/img/search.svg" alt="">
                         </button>
@@ -80,4 +80,3 @@
         </div>
     </div>
 </header>
-<div class="dashboar-wrapper">
