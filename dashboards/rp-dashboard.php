@@ -147,6 +147,8 @@ include_once('modules/sidebar.php'); ?>
             </div>
         </div>
     </div>
+    <?php
+    include_once('modules/rp-search.php'); ?>
 </div>
 <?php
 include_once('modules/footer.php'); ?>

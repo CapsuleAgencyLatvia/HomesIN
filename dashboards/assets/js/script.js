@@ -10,7 +10,7 @@ $(document).ready(function(){
         blue: 'rgba(0, 40, 255, .5)',
     };
     var line1 = [20,60,30,45,30,80,30];
-    var line2 = [20,80,40,60,30,50,25];
+    var line2 = [40,80,40,60,30,50,25];
     var xaxys = [5,10,15,20,25,30,35];
     var config = {
         type: 'line',
@@ -80,6 +80,13 @@ $(document).ready(function(){
     var config = {
         type: 'pie',
         data: {
+            labels: [
+                'Very Unsatisfied',
+                'Unsatisfied',
+                'Neutral',
+                'Satisfied',
+                'Very Satisfied',
+            ],
             datasets: [{
                 data: [19,21,19,19,40],
                 backgroundColor: [
@@ -91,13 +98,6 @@ $(document).ready(function(){
                 ],
                 label: 'Dataset 1'
             }],
-            labels: [
-                'Very Unsatisfied',
-                'Unsatisfied',
-                'Neutral',
-                'Satisfied',
-                'Very Satisfied'
-            ]
         },
         options: {
             responsive: true,
