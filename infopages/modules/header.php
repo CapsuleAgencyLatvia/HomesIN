@@ -18,7 +18,7 @@
                 <div class="loggin-wrapper">
                     <button class="toggle-choices">
                         <span>Log in</span>
-                        <img src="assets/img/arrow-down.svg" alt="Arrow Down">
+                        <img src="/global/assets/img/arrow-down.svg" alt="Arrow Down">
                     </button>
                     <div class="choices">
                         <div class="head">
@@ -30,7 +30,7 @@
                         $cnt = 0;
                         foreach ( $login_options as $login_option ) : ?>
                             <button class="choice" data-choice="<?php echo $login_option; ?>" data-user-type="<?php echo $options[$cnt]; ?>">
-                                <img src="assets/img/icon-placeholder-round.svg" alt="">
+                                <img src="/global/assets/img/icon-placeholder-round.svg" alt="">
                                 <span><?php echo $login_option; ?></span>
                             </button>
                             <?php
@@ -38,7 +38,7 @@
                         endforeach; ?>
                         <hr>
                         <button class="choice" data-choice="Back office" data-user-type="bo">
-                            <img src="assets/img/icon-placeholder-round.svg" alt="">
+                            <img src="/global/assets/img/icon-placeholder-round.svg" alt="">
                             <span>Back office</span>
                         </button>
                     </div>
@@ -52,21 +52,21 @@
         <div class="content">
             <div class="close-wrapper">
                 <button class="close-form">
-                    <img class="lazy" data-src="assets/img/cross.svg" alt="Close">
+                    <img class="lazy" data-src="/global/assets/img/cross.svg" alt="Close">
                 </button>
             </div>
             <div class="head">
-                <img class="icon lazy" data-src="assets/img/person.svg" alt="Person">
+                <img class="icon lazy" data-src="/global/assets/img/person.svg" alt="Person">
                 <p class="info">Please log in</p>
                 <h3 class="type"></h3>
             </div>
-            <form class="form login">
+            <form class="form login" action="/dashboards/rp-dashboard.php">
                 <input type="text" name="user-type" value="" hidden>
                 <div class="field-wrapper">
-                    <input class="input" type="email" name="email" value="" placeholder="Email Address">
+                    <input class="input" type="email" name="email" value="" placeholder="Email Address" required>
                 </div>
                 <div class="field-wrapper">
-                    <input class="input" type="password" name="password" value="" placeholder="Password">
+                    <input class="input" type="password" name="password" value="" placeholder="Password" required>
                 </div>
                 <div class="field-wrapper">
                     <button class="btn btn-black" type="submit" name="button">Log in</button>
@@ -87,14 +87,14 @@
         <div class="content">
             <div class="close-wrapper">
                 <button class="close-form">
-                    <img class="lazy" data-src="assets/img/cross.svg" alt="Close">
+                    <img class="lazy" data-src="/global/assets/img/cross.svg" alt="Close">
                 </button>
             </div>
             <div class="head">
-                <img class="icon lazy" data-src="assets/img/person.svg" alt="Person">
+                <img class="icon lazy" data-src="/global/assets/img/person.svg" alt="Person">
                 <h3 class="type">Application / Sign up</h3>
             </div>
-            <form class="form register">
+            <form class="form register" action="/dashboards/rp-dashboard.php">
                 <p class="heading">Sign up as:</p>
                 <div class="field-wrapper">
                     <select class="input select user-type" name="user-type">
