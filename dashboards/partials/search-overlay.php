@@ -6,7 +6,7 @@
     </div>
     <div class="wrapper">
         <div class="container">
-            <form class="search-form">
+            <form class="search-form" action="/dashboards/rp-search-results.php">
                 <h3 class="heading">Location - <span>None Specified</span></h3>
                 <div class="field-wrapper">
                     <input class="input" type="text" name="search" value="" placeholder="Postcode / Local Authority">
