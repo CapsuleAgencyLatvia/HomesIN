@@ -68,10 +68,20 @@ include_once('modules/sidebar.php'); ?>
             </div>
             <div class="flexbox blocks">
                 <div class="col col-6">
-
+                    <div class="block chart line">
+                        <p>Cost of unfilled Vacancy</p>
+                        <canvas id="vacancy-line" width="300" height="100">
+                            <p>Your browser does not support the canvas element</p>
+                        </canvas>
+                    </div>
                 </div>
                 <div class="col col-4">
-
+                    <div class="block chart pie">
+                        <p>Quality of Vacancy</p>
+                        <canvas id="vacancy-pie" width="185" height="100">
+                            <p>Your browser does not support the canvas element</p>
+                        </canvas>
+                    </div>
                 </div>
             </div>
         </div>

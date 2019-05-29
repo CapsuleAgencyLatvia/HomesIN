@@ -8,7 +8,7 @@
 <body>
 <header id="header">
     <div class="left">
-        <div class="flexbox vc sb">
+        <div class="flexbox vc hsb">
             <div class="col">
                 <a class="logo-wrapper" href="/">
                     <img class="logo lazy" data-src="" alt="">
@@ -16,9 +16,11 @@
             </div>
             <div class="col">
                 <button class="toggle-sidebar">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
+                    <div class="lines">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
                 </button>
             </div>
         </div>
