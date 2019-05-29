@@ -109,6 +109,18 @@ $(document).ready(function(){
     };
     var ctx = document.getElementById("vacancy-pie").getContext("2d");
     var vacancyPie = new Chart(ctx, config);
+
+    /**
+     * Search overlay
+    **/
+    var sidebar = $('#sidebar');
+    var searchOverlay = $('#search-overlay');
+    searchOverlay.find('.close').on('click', function(){
+        searchOverlay.fadeOut();
+    });
+    sidebar.find('.toggle-search-overlay').on('click', function(){
+        searchOverlay.fadeIn();
+    });
 });
 
 /**

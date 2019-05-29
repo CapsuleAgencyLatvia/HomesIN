@@ -219,7 +219,10 @@ $text: #b5b7bb;
             border-bottom: 1px solid white;
             .menu-item {
                 padding: .5rem 0;
-                a {
+                .icon-wrapper {
+                    width: 100%;
+                    color: white;
+                    font-weight: $light;
                     font-size: .9em;
                     padding-left: 1rem;
                 }
@@ -379,7 +382,7 @@ $text: #b5b7bb;
  * Search overlay
 **/
 #search-overlay {
-    // display: none;
+    display: none;
     position: fixed;
     z-index: 10;
     top: 4rem;
@@ -387,8 +390,6 @@ $text: #b5b7bb;
     right: 0;
     bottom: 0;
     background-color: rgba(white,.9);
-    display: flex;
-    align-items: center;
     .close-wrapper {
         position: absolute;
         z-index: 1;
@@ -403,6 +404,11 @@ $text: #b5b7bb;
                 object-fit: contain;
             }
         }
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
     .search-form {
         width: 100%;

@@ -6,7 +6,7 @@
     $blocks = array(
         array('heading' => 'Home', 'items' => array(
             array('title' => 'Dashboard','url' => '/dashboards/rp-dashboard.php'),
-            array('title' => 'Search','url' => '')
+            array('title' => 'Search','url' => 'search')
         )),
         array('heading' => 'Property', 'items' => array(
             array('title' => 'Vacancies Filled','url' => ''),
@@ -39,10 +39,20 @@
                 <?php
                 foreach ( $block['items'] as $item ) : ?>
                     <li class="menu-item">
-                        <a class="icon-wrapper" href="<?php echo $item['url']; ?>">
-                            <img src="/global/assets/img/icon-placeholder-round.svg" alt="Placeholder">
-                            <span><?php echo $item['title']; ?></span>
-                        </a>
+                        <?php
+                        if ( $item['url'] != 'search' ) : ?>
+                            <a class="icon-wrapper" href="<?php echo $item['url']; ?>">
+                                <img src="/global/assets/img/icon-placeholder-round.svg" alt="Placeholder">
+                                <span><?php echo $item['title']; ?></span>
+                            </a>
+                            <?php
+                        else: ?>
+                            <button class="icon-wrapper toggle-search-overlay">
+                                <img src="/global/assets/img/icon-placeholder-round.svg" alt="Placeholder">
+                                <span><?php echo $item['title']; ?></span>
+                            </button>
+                            <?php
+                        endif; ?>
                     </li>
                     <?php
                 endforeach; ?>
