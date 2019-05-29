@@ -686,6 +686,37 @@ $text-darkest: #343434;
                 color: $text-dark;
                 line-height: 1.5;
             }
+            .overlay {
+                position: absolute;
+                z-index: 1;
+                top: 1rem;
+                right: 1rem;
+                .star-wrapper {
+                    display: flex;
+                    align-items: center;
+                    .stars {
+                        display: flex;
+                        align-items: center;
+                        padding-right: .5rem;
+                        .star {
+                            svg {
+                                display: block;
+                                width: 1.25rem;
+                                height: 1.25rem;
+                                fill: $gray;
+                            }
+                            &.full {
+                                svg {
+                                    fill: black;
+                                }
+                            }
+                        }
+                    }
+                    .icon {
+                        width: 1.75rem;
+                    }
+                }
+            }
         }
     }
 }

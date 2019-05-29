@@ -8,6 +8,10 @@
             </div>
             <div class="col col-5">
                 <div class="content">
+                    <div class="overlay">
+                        <?php
+                        include_once('partials/property/vaccancy-filled.php'); ?>
+                    </div>
                     <p class="location">Upper Tooting Park, London, SW17</p>
                     <h3 class="title">2 Bedroom Semi-Detached</h3>
                     <p class="distance"><span class="val">0.42</span> Miles from station</p>
