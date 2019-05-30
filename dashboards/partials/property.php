@@ -270,7 +270,7 @@ class Property {
                     <?php
                     $active_item == "attention" ? $class = "active" : $class = ""; ?>
                     <li class="menu-item">
-                        <a class="link <?php echo $class; ?>" href="">
+                        <a class="link <?php echo $class; ?>" href="/dashboards/rp-requiring-attention.php">
                             <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                             <span>Vacancies requiring Attention</span>
                         </a>
@@ -278,7 +278,7 @@ class Property {
                     <?php
                     $active_item == "progress" ? $class = "active" : $class = ""; ?>
                     <li class="menu-item">
-                        <a class="link <?php echo $class; ?>" href="">
+                        <a class="link <?php echo $class; ?>" href="/dashboards/rp-in-progress.php">
                             <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                             <span>Vacancies in Progress</span>
                         </a>
@@ -286,7 +286,7 @@ class Property {
                     <?php
                     $active_item == "filled" ? $class = "active" : $class = ""; ?>
                     <li class="menu-item">
-                        <a class="link <?php echo $class; ?>" href="">
+                        <a class="link <?php echo $class; ?>" href="/dashboards/rp-filled.php">
                             <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                             <span>Vacancies filled</span>
                         </a>

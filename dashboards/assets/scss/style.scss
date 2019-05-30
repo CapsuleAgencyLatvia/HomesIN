@@ -463,6 +463,15 @@ $text-darkest: #343434;
                 color: $text-light;
             }
         }
+    }
+}
+
+#filter-overlay {
+    
+}
+
+.property-filters {
+    .wrapper {
         .field-wrapper {
             .input {
                 padding: .75rem;

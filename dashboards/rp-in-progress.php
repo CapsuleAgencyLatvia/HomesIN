@@ -4,7 +4,7 @@ include_once('modules/sidebar.php');
 include_once('partials/property.php');
 include_once('modules/footer.php');
 
-$header = new Header('Property Resent to CP');
+$header = new Header('Vacancies in progress');
 $property = new Property; ?>
 <div id="dashboar-wrapper" class="registered-provider">
     <?php

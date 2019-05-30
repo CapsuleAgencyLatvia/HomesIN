@@ -15,8 +15,8 @@ class Sidebar {
                     array('title' => 'Search','url' => 'search')
                 )),
                 array('heading' => 'Property', 'items' => array(
-                    array('title' => 'Vacancies Filled','url' => ''),
-                    array('title' => 'In Progress','url' => ''),
+                    array('title' => 'Vacancies Filled','url' => '/dashboards/rp-filled.php'),
+                    array('title' => 'In Progress','url' => '/dashboards/rp-in-progress.php'),
                     array('title' => 'Requiring Attention','url' => '/dashboards/rp-requiring-attention.php'),
                     array('title' => 'Submit new Vacancy','url' => ''),
                     array('title' => 'Bulk Upload','url' => ''),
