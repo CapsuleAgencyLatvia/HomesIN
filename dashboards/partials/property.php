@@ -35,7 +35,21 @@ class Property {
                 </div>
                 <div class="col col-2">
                     <p class="heading">Action Required</p>
-                    <button class="btn btn-yellow btn-small"><?php echo $button; ?></button>
+                    <?php
+                    switch ($button) :
+                        case "resend": ?>
+                            <button class="btn btn-lightgreen btn-small">Resend to CP</button>
+                            <?php
+                        break;
+                        case "save": ?>
+                            <button class="btn btn-yellow btn-small">Save Changes</button>
+                            <?php
+                        break;
+                        case "update": ?>
+                            <button class="btn btn-yellow btn-small">Info/Update</button>
+                            <?php
+                        break;
+                    endswitch; ?>
                 </div>
             </div>
         </div>
@@ -386,6 +400,13 @@ class Property {
                 <?php
             break;
 
+            case "progress": ?>
+                <div class="icon-wrapper">
+                    <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                </div>
+                <?php
+            break;
+
             case "attention-single": ?>
                 <div class="message-wrapper">
                     <img class="warning lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
@@ -398,6 +419,20 @@ class Property {
                     </div>
                 </div>
             <?php
+            break;
+
+            case "sent": ?>
+                <div class="message-wrapper">
+                    <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                    <div class="icon-group success">
+                        <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                        <div class="message">
+                            <p class="reason">Sent to</p>
+                            <p class="person">Care provider</p>
+                        </div>
+                    </div>
+                </div>
+                <?php
             break;
 
             case 'attention': ?>

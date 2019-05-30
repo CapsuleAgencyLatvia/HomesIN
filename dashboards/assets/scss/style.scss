@@ -12,7 +12,10 @@ $light-aqua: #6fa5a9;
 $aqua: #31929a;
 $red: #e11212;
 $yellow: #f5a623;
+
+$light-green: #7ed321;
 $green: #417505;
+
 $purple: #ac92ec;
 
 $blue: #4a90e2;
@@ -61,6 +64,11 @@ $text-darkest: #343434;
         color: white;
         border-radius: .25rem;
         background-color: $green;
+    }
+    &.btn-lightgreen {
+        color: white;
+        border-radius: .25rem;
+        background-color: $light-green;
     }
 }
 
@@ -865,8 +873,8 @@ $text-darkest: #343434;
                 .message-wrapper {
                     display: flex;
                     align-items: center;
-                    .warning {
-                        width: 1.25rem;
+                    .icon {
+                        width: 1.5rem;
                     }
                     .icon-group {
                         padding: 1rem;
@@ -878,16 +886,26 @@ $text-darkest: #343434;
                         &.attention {
                             background-color: $red;
                         }
+                        &.success {
+                            background-color: $light-green;
+                        }
                         .message {
                             padding-left: .5rem;
-                            font-size: .7em;
-                            font-weight: $regular;
+                            font-size: .6em;
                             p {
-                                letter-spacing: 1px;
+                                letter-spacing: 2px;
                                 text-transform: uppercase;
                                 margin: 0;
+                                &:first-child {
+                                    padding-bottom: .25rem;
+                                }
                             }
                         }
+                    }
+                }
+                .icon-wrapper {
+                    .icon {
+                        width: 2rem;
                     }
                 }
             }

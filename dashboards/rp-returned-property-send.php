@@ -4,7 +4,7 @@ include_once('modules/sidebar.php');
 include_once('partials/property.php');
 include_once('modules/footer.php');
 
-$header = new Header('Property returned CP');
+$header = new Header('Property return CP');
 $property = new Property; ?>
 <div id="dashboar-wrapper" class="registered-provider">
     <?php
@@ -23,7 +23,7 @@ $property = new Property; ?>
                 </div>
                 <div class="block">
                     <?php
-                    $property->returned_message('update'); ?>
+                    $property->returned_message('resend'); ?>
                 </div>
                 <?php
                 $property->property_slider('attention-single'); ?>

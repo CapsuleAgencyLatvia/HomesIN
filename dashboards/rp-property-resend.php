@@ -4,7 +4,7 @@ include_once('modules/sidebar.php');
 include_once('partials/property.php');
 include_once('modules/footer.php');
 
-$header = new Header('Property returned CP');
+$header = new Header('Property Resent to CP');
 $property = new Property; ?>
 <div id="dashboar-wrapper" class="registered-provider">
     <?php
@@ -17,16 +17,8 @@ $property = new Property; ?>
                 $property->breadcrumbs(); ?>
             </div>
             <div class="main">
-                <div class="block">
-                    <?php
-                    $property->returned_info(); ?>
-                </div>
-                <div class="block">
-                    <?php
-                    $property->returned_message('update'); ?>
-                </div>
                 <?php
-                $property->property_slider('attention-single'); ?>
+                $property->property_slider('sent'); ?>
             </div>
         </div>
         <?php
