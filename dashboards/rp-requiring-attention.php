@@ -5,11 +5,10 @@ include_once('modules/header.php'); ?>
 <div id="dashboar-wrapper" class="registered-provider">
     <?php
     include_once('modules/sidebar.php'); ?>
-    <div id="dashboard" class="search-results">
+    <div id="dashboard" class="requiring-attention">
         <div class="container">
             <?php
             $property->filter();
-            $property->search();
             $property->refine(); ?>
             <div class="properties">
                 <?php

@@ -586,6 +586,7 @@ $text-darkest: #343434;
             visibility: hidden;
             opacity: 0;
             position: absolute;
+            z-index: 10;
             top: 2rem;
             right: -1rem;
             padding: 1.5rem 1rem;

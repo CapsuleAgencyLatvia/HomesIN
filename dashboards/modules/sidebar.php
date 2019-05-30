@@ -11,7 +11,7 @@
         array('heading' => 'Property', 'items' => array(
             array('title' => 'Vacancies Filled','url' => ''),
             array('title' => 'In Progress','url' => ''),
-            array('title' => 'Requiring Attention','url' => ''),
+            array('title' => 'Requiring Attention','url' => '/dashboards/rp-requiring-attention.php'),
             array('title' => 'Submit new Vacancy','url' => ''),
             array('title' => 'Bulk Upload','url' => ''),
         )),
