@@ -3,95 +3,89 @@
  * Property functions
 **/
 class Property {
-    function search() { ?>
-        <div id="search-overlay">
-            <div class="close-wrapper">
-                <button class="close">
-                    <img src="/global/assets/img/cross.svg" alt="">
-                </button>
-            </div>
-            <div class="wrapper">
-                <div class="container">
-                    <form class="search-form" action="/dashboards/rp-search-results.php">
-                        <h3 class="heading">Location - <span>None Specified</span></h3>
-                        <div class="field-wrapper">
-                            <input class="input" type="text" name="search" value="" placeholder="Postcode / Local Authority">
+    function search_form() { ?>
+        <div id="search-form">
+            <form class="form" action="/dashboards/rp-search-results.php">
+                <?php
+                $blocks = array(
+                    array(
+                        'title' => 'Property Type',
+                        'options' => array('Houses', 'Flats')
+                    ),
+                    array(
+                        'title' => 'Bedrooms',
+                        'options' => array('3', '5')
+                    ),
+                    array(
+                        'title' => 'Features',
+                        'options' => array('Garden', 'Balcony')
+                    ),
+                    array(
+                        'title' => 'Rating',
+                        'options' => array('5 stars', '4 stars')
+                    ),
+                    array(
+                        'title' => 'Price range',
+                        'options' => array('£50 - £100', '£100 - £200')
+                    )
+                ); ?>
+                <div class="flexbox-full vc">
+                    <div class="col">
+                        <div class="search-radius">
+                            <input class="input search" type="text" name="search" value="Barnet">
+                            <select class="input radius" name="">
+                                <option value="">+ 0 miles</option>
+                            </select>
+                        </div>
+                    </div>
+                    <?php
+                    foreach ( $blocks as $block ) : ?>
+                        <div class="col">
+                            <div class="input-wrapper">
+                                <select class="input" name="">
+                                    <option value=""><?php echo $block['title']; ?></option>
+                                    <?php
+                                    foreach ( $block['options'] as $option ) : ?>
+                                        <option value=""><?php echo $option; ?></option>
+                                        <?php
+                                    endforeach; ?>
+                                </select>
+                            </div>
                         </div>
                         <?php
-                        $blocks = array(
-                            array(
-                                'title' => 'Property Type',
-                                'options' => array('Houses', 'Flats')
-                            ),
-                            array(
-                                'title' => 'Number of Bedrooms',
-                                'options' => array('3', '5')
-                            ),
-                            array(
-                                'title' => 'Features',
-                                'options' => array('Garden', 'Balcony')
-                            ),
-                            array(
-                                'title' => 'Rating',
-                                'options' => array('5 stars', '4 stars')
-                            ),
-                            array(
-                                'title' => 'Search radius',
-                                'options' => array('This area only')
-                            ),
-                            array(
-                                'title' => 'Price range',
-                                'options' => array('£50 - £100', '£100 - £200')
-                            )
-                        ); ?>
-                        <div class="filters flexbox">
-                            <?php
-                            foreach ( $blocks as $block ) : ?>
-                                <div class="col col-33">
-                                    <div class="filter">
-                                        <p><?php echo $block['title']; ?></p>
-                                        <select class="input" name="">
-                                            <?php
-                                            foreach ( $block['options'] as $option ) : ?>
-                                                <option value=""><?php echo $option; ?></option>
-                                                <?php
-                                            endforeach; ?>
-                                        </select>
-                                    </div>
-                                </div>
-                                <?php
-                            endforeach; ?>
-                        </div>
-                        <div class="flexbox-full hc">
-                            <button class="btn btn-yellow" type="submit" name="button">Search</button>
-                        </div>
-                    </form>
+                    endforeach; ?>
                 </div>
-            </div>
+            </form>
         </div>
         <?php
     }
     /**
      * Filter
     **/
-    function filter() { ?>
+    function filter($active_item) { ?>
         <div id="filter-form">
             <div class="flexbox-full hsb">
                 <ul class="nav-menu">
+                    <?php
+                    $active_item == "attention" ? $class = "active" : $class = ""; ?>
                     <li class="menu-item">
-                        <a class="link" href="">
+                        <a class="link <?php echo $class; ?>" href="">
                             <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                             <span>Vacancies requiring Attention</span>
                         </a>
                     </li>
+                    <?php
+                    $active_item == "progress" ? $class = "active" : $class = ""; ?>
                     <li class="menu-item">
-                        <a class="link" href="">
+                        <a class="link <?php echo $class; ?>" href="">
                             <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                             <span>Vacancies in Progress</span>
                         </a>
                     </li>
+                    <?php
+                    $active_item == "filled" ? $class = "active" : $class = ""; ?>
                     <li class="menu-item">
-                        <a class="link active" href="">
+                        <a class="link <?php echo $class; ?>" href="">
                             <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                             <span>Vacancies filled</span>
                         </a>
@@ -181,7 +175,7 @@ class Property {
     **/
     function vacancy_type($type) {
         switch ($type) {
-            case 'vaccancy-filled': ?>
+            case 'filled': ?>
                 <div class="star-wrapper">
                     <div class="stars">
                         <div class="star full">
@@ -201,6 +195,13 @@ class Property {
                         </div>
                     </div>
                     <img class="icon" src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                </div>
+                <?php
+            break;
+            case 'attention': ?>
+                <div class="icon-group">
+                    <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                    <img class="exclamation lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                 </div>
                 <?php
             break;

@@ -1,19 +1,23 @@
 <?php
+include_once('modules/header.php');
+include_once('modules/sidebar.php');
 include_once('partials/property.php');
-$property = new Property;
-include_once('modules/header.php'); ?>
+include_once('modules/footer.php');
+
+$header = new Header('Requiring attention');
+$property = new Property; ?>
 <div id="dashboar-wrapper" class="registered-provider">
     <?php
-    include_once('modules/sidebar.php'); ?>
+    $sidebar = new Sidebar; ?>
     <div id="dashboard" class="requiring-attention">
         <div class="container">
             <?php
-            $property->filter();
+            $property->filter('attention');
             $property->refine(); ?>
             <div class="properties">
                 <?php
                 for ($i=0; $i < 3; $i++) :
-                    $type = 'vaccancy-filled';
+                    $type = 'attention';
                     $property->grid($type);
                 endfor; ?>
             </div>
@@ -26,4 +30,4 @@ include_once('modules/header.php'); ?>
     </div>
 </div>
 <?php
-include_once('modules/footer.php'); ?>
+$footer = new Footer(); ?>

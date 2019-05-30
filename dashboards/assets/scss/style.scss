@@ -527,11 +527,12 @@ $text-darkest: #343434;
 }
 
 #filter-form {
+    border-bottom: 1px solid $light-gray;
     .nav-menu {
         display: flex;
         align-items: center;
         list-style: none;
-        margin: 0 .5rem;
+        margin: 0 -.5rem;
         padding: 0;
         .menu-item {
             padding: 0 .5rem;
@@ -557,16 +558,19 @@ $text-darkest: #343434;
     }
     .form {
         .flexbox {
+            height: 100%;
             margin: 0 -.25rem;
             .col {
                 padding: 0 .25rem;
             }
         }
         .heading {
+            margin: 0;
             padding-right: 1.75rem;
         }
         .filter-wrapper {
             .icon {
+                display: block;
                 img {
                     width: 1rem;
                 }
@@ -715,6 +719,19 @@ $text-darkest: #343434;
                     }
                     .icon {
                         width: 1.75rem;
+                    }
+                }
+                .icon-group {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        height: 1.5rem;
+                    }
+                    .icon {
+                        margin-right: .25rem;
+                    }
+                    .exclamation {
+                        margin-left: .25rem;
                     }
                 }
             }

@@ -1,8 +1,13 @@
 <?php
-include_once('modules/header.php'); ?>
+include_once('modules/header.php');
+include_once('modules/sidebar.php');
+include_once('partials/property.php');
+include_once('modules/footer.php');
+
+$header = new Header('Dashboard'); ?>
 <div id="dashboar-wrapper" class="registered-provider">
     <?php
-    include_once('modules/sidebar.php'); ?>
+    $sidebar = new Sidebar; ?>
     <div id="dashboard" class="home">
         <div class="container">
             <div class="segment overview">
@@ -154,4 +159,4 @@ include_once('modules/header.php'); ?>
     </div>
 </div>
 <?php
-include_once('modules/footer.php'); ?>
+$footer = new Footer; ?>
