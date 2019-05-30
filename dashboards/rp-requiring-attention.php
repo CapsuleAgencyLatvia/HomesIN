@@ -11,18 +11,22 @@ $property = new Property; ?>
     $sidebar = new Sidebar; ?>
     <div id="dashboard" class="requiring-attention">
         <div class="container">
-            <?php
-            $property->filter('attention');
-            $property->refine(); ?>
-            <div class="properties">
+            <div class="header">
                 <?php
-                for ($i=0; $i < 3; $i++) :
-                    $type = 'attention';
-                    $property->grid($type);
-                endfor; ?>
+                $property->filter('attention');
+                $property->refine(); ?>
             </div>
-            <div class="flexbox hc">
-                <button id="load-more" class="btn btn-gray">Load More</button>
+            <div class="main">
+                <div class="properties">
+                    <?php
+                    for ($i=0; $i < 3; $i++) :
+                        $type = 'attention';
+                        $property->grid($type);
+                    endfor; ?>
+                </div>
+                <div class="flexbox hc">
+                    <button id="load-more" class="btn btn-gray">Load More</button>
+                </div>
             </div>
         </div>
         <?php

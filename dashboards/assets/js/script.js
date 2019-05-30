@@ -155,4 +155,20 @@ $(window).on('load', function() {
     var lazyLoadInstance = new LazyLoad({
         elements_selector: ".lazy"
     });
+
+    var propertySingleSlider = $('.property-slider');
+    if ( propertySingleSlider.length ) {
+        propertySingleSlider.find('.slider-wrapper').owlCarousel({
+            items: 1,
+            dots: false,
+            lazyLoad: true,
+            URLhashListener:true,
+            startPosition: 'URLHash',
+        });
+        propertySingleSlider.find('.thumbnails .owl-carousel').owlCarousel({
+            items: 5,
+            dots: false,
+            lazyLoad: true,
+        });
+    }
 });

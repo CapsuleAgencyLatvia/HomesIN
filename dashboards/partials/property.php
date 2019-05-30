@@ -3,6 +3,75 @@
  * Property functions
 **/
 class Property {
+    /**
+     * Returned info
+    **/
+    function returned_info() { ?>
+        <div id="returned-info">
+            <div class="wrapper">
+                <img class="person lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                <img class="warning lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                <p>The <span class="cp active">CP</span>/<span class="la">LA</span>/<span class="csv-upload">CSV upload</span> has returned this property as unsuitable</p>
+            </div>
+        </div>
+        <?php
+    }
+
+    /**
+     * Returned message
+    **/
+    function returned_message() { ?>
+        <div id="returned-message">
+            <div class="flexbox hsb">
+                <div class="col col-3">
+                    <p class="heading">Care Provider</p>
+                    <h3 class="title">2 Bedroom Semi-Detached</h3>
+                    <p class="location">Upper Tooting Park, London, SW17</p>
+                </div>
+                <div class="col col-5">
+                    <p class="heading">Message</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <a class="read" href="#">Read full message</a>
+                </div>
+                <div class="col col-2">
+                    <p class="heading">Action Required</p>
+                    <button class="btn btn-yellow btn-small">Info/update</button>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    /**
+     * Breadcrumbs and filters???
+    **/
+    function breadcrumbs() { ?>
+        <div id="breadcrumbs">
+            <div class="breadcrumbs">
+                <div class="breadcrumb main">
+                    <p>All property</p>
+                    <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                </div>
+                <div class="breadcrumb active">
+                    <p>Details</p>
+                </div>
+                <div class="breadcrumb">
+                    <p>Location</p>
+                </div>
+                <div class="breadcrumb">
+                    <p>Facilities</p>
+                </div>
+                <div class="breadcrumb">
+                    <p>Pricing</p>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    /**
+     * Properties search form
+    **/
     function search_form() { ?>
         <div id="search-form">
             <form class="form" action="/dashboards/rp-search-results.php">
@@ -59,8 +128,10 @@ class Property {
         </div>
         <?php
     }
+
+
     /**
-     * Filter
+     * Properties nav and filter
     **/
     function filter($active_item) { ?>
         <div id="filter-form">
@@ -134,7 +205,7 @@ class Property {
     }
 
     /**
-     * Refine
+     * Refine properties
     **/
     function refine() { ?>
         <div id="refine">
@@ -171,7 +242,7 @@ class Property {
     }
 
     /**
-     * Vaccancy type
+     * Vaccancy type for Property in grid
     **/
     function vacancy_type($type) {
         switch ($type) {
@@ -194,10 +265,25 @@ class Property {
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><defs></defs><path class="a" d="M25,1.318l7.725,16.459L50,20.417,37.5,33.227l2.951,18.091L25,42.777,9.549,51.318,12.5,33.227,0,20.417l17.275-2.64Z" transform="translate(0 -1.318)"/></svg>
                         </div>
                     </div>
-                    <img class="icon" src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                    <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                 </div>
                 <?php
             break;
+
+            case "attention-single": ?>
+                <div class="message-wrapper">
+                    <img class="warning lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                    <div class="icon-group attention">
+                        <img class="warning lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                        <div class="message">
+                            <p class="person">Care provider</p>
+                            <p class="reason">Says unsuitable</p>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            break;
+
             case 'attention': ?>
                 <div class="icon-group">
                     <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
@@ -229,8 +315,72 @@ class Property {
                             <p class="location">Upper Tooting Park, London, SW17</p>
                             <h3 class="title">2 Bedroom Semi-Detached</h3>
                             <p class="distance"><span class="val">0.42</span> Miles from station</p>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
                             <a class="btn btn-small btn-gray" href="">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <?php
+    }
+
+    function property_slider($type) { ?>
+        <article class="property-wrapper property-slider">
+            <div class="block">
+                <div class="property">
+                    <div class="flexbox-full">
+                        <div class="col col-5">
+                            <div class="slider-wrapper owl-carousel">
+                                <?php
+                                for ($i=0; $i < 10; $i++) : ?>
+                                    <div class="slide" data-hash="slide-<?php echo $i; ?>">
+                                        <img class="owl-lazy" data-src="/global/assets/img/image-placeholder.svg" alt="">
+                                    </div>
+                                    <?php
+                                endfor; ?>
+                            </div>
+                        </div>
+                        <div class="col col-5">
+                            <div class="content">
+                                <div class="overlay">
+                                    <?php
+                                    $this->vacancy_type($type); ?>
+                                </div>
+                                <p class="location">Upper Tooting Park, London, SW17</p>
+                                <h3 class="title">2 Bedroom Semi-Detached</h3>
+                                <p class="distance"><span class="val">0.42</span> Miles from station</p>
+                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+                                <a class="btn btn-small btn-gray" href="">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="footer flexbox-full">
+                    <div class="col col-5">
+                        <div class="thumbnails">
+                            <div class="owl-carousel">
+                                <?php
+                                for ($i=0; $i < 10; $i++) : ?>
+                                    <a href="#slide-<?php echo $i; ?>" class="thumbnail">
+                                        <img src="/global/assets/img/image-placeholder.svg" alt="">
+                                    </a>
+                                    <?php
+                                endfor; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-5">
+                        <div class="information">
+                            <div class="wrapper">
+                                <div class="info">
+                                    <p class="person">Care provider HCPA</p>
+                                    <p class="location">Mudelis Campus, Ridgeway, Welwyn Garden City AL7 1FT</p>
+                                </div>
+                                <a class="btn btn-yellow btn-small" href="#">Contact</a>
+                            </div>
                         </div>
                     </div>
                 </div>

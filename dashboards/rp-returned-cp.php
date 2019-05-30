@@ -4,30 +4,29 @@ include_once('modules/sidebar.php');
 include_once('partials/property.php');
 include_once('modules/footer.php');
 
-$header = new Header('Search results');
+$header = new Header('Property returned CP');
 $property = new Property; ?>
 <div id="dashboar-wrapper" class="registered-provider">
     <?php
     $sidebar = new Sidebar; ?>
-    <div id="dashboard" class="search-results">
+    <div id="dashboard" class="property-returned">
         <div class="container">
             <div class="header">
                 <?php
-                $type = 'filled';
-                $property->filter($type);
-                $property->search_form();
-                $property->refine(); ?>
+                $property->filter('attention');
+                $property->breadcrumbs(); ?>
             </div>
             <div class="main">
-                <div class="properties">
+                <div class="block">
                     <?php
-                    for ($i=0; $i < 3; $i++) :
-                        $property->grid($type);
-                    endfor; ?>
+                    $property->returned_info(); ?>
                 </div>
-                <div class="flexbox hc">
-                    <button id="load-more" class="btn btn-gray">Load More</button>
+                <div class="block">
+                    <?php
+                    $property->returned_message(); ?>
                 </div>
+                <?php
+                $property->property_slider('attention-single'); ?>
             </div>
         </div>
         <?php
