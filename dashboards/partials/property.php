@@ -20,7 +20,7 @@ class Property {
     /**
      * Returned message
     **/
-    function returned_message() { ?>
+    function returned_message($button) { ?>
         <div id="returned-message">
             <div class="flexbox hsb">
                 <div class="col col-3">
@@ -35,9 +35,125 @@ class Property {
                 </div>
                 <div class="col col-2">
                     <p class="heading">Action Required</p>
-                    <button class="btn btn-yellow btn-small">Info/update</button>
+                    <button class="btn btn-yellow btn-small"><?php echo $button; ?></button>
                 </div>
             </div>
+        </div>
+        <?php
+    }
+
+    /**
+     * Update property
+    **/
+    function update_property() { ?>
+        <div id="update-record">
+            <div class="header">
+                <h3 class="heading">Update record</h3>
+            </div>
+            <form class="content">
+                <div class="block location">
+                    <div class="flexbox vc">
+                        <div class="col col-2">
+                            <p>Address:</p>
+                        </div>
+                        <div class="col col-8">
+                            <input class="input"  type="text" name="address-1" value="">
+                        </div>
+                        <div class="col col-2"></div>
+                        <div class="col col-8">
+                            <input class="input"  type="text" name="address-2" value="">
+                        </div>
+                        <div class="col col-2">
+                            <p>Town/City:</p>
+                        </div>
+                        <div class="col col-8">
+                            <input class="input"  type="text" name="town-city" value="">
+                        </div>
+                        <div class="col col-2">
+                            <p>Postcode</p>
+                        </div>
+                        <div class="col col-8">
+                            <input class="input"  type="text" name="postcode" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="block images">
+                    <div class="flexbox vc">
+                        <div class="col col-2">
+                            <p>Images:</p>
+                            <button class="btn btn-gray btn-small">Add image</button>
+                            <button class="btn btn-gray btn-small">Upload</button>
+                        </div>
+                        <div class="col col-8">
+                            <div class="images flexbox">
+                                <?php
+                                for ($i=0; $i < 8; $i++) : ?>
+                                    <div class="col col-25">
+                                        <img class="image" src="/global/assets/img/image-placeholder.svg" alt="">
+                                    </div>
+                                    <?php
+                                endfor; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block property">
+                    <div class="flexbox">
+                        <div class="col col-2">
+                            <p>Property type:</p>
+                        </div>
+                        <div class="col col-8">
+                            <input class="input" type="text" name="preperty-type" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="block info">
+                    <div class="flexbox">
+                        <div class="col col-2">
+                            <p>Core rent:</p>
+                        </div>
+                        <div class="col col-8">
+                            <input class="input" type="text" name="core-rent" value="">
+                        </div>
+                        <div class="col col-2">
+                            <p>Service charge:</p>
+                        </div>
+                        <div class="col col-8">
+                            <input class="input" type="text" name="service-change" value="">
+                        </div>
+                        <div class="col col-2">
+                            <p>Nominated aggrement:</p>
+                        </div>
+                        <div class="col col-8">
+                            <input class="input" type="text" name="nominated-agreement" value="">
+                        </div>
+                        <div class="col col-2">
+                            <p>Care provider:</p>
+                        </div>
+                        <div class="col col-8">
+                            <input class="input" type="text" name="cp" value="">
+                        </div>
+                        <div class="col col-2">
+                            <p>Availability:</p>
+                        </div>
+                        <div class="col col-8">
+                            <div class="auto-jsCalendar" data-first-day-of-the-week="2"></div>
+                            <input class="input" type="date" name="cp" value="" hidden>
+                        </div>
+                        <div class="col col-2">
+                            <p>Comments:</p>
+                        </div>
+                        <div class="col col-8">
+                            <textarea class="input" name="name" rows="8" cols="80"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="flexbox-full hc">
+                        <button class="btn btn-green" type="submit">Update Record</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <?php
     }

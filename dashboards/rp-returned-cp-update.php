@@ -23,10 +23,12 @@ $property = new Property; ?>
                 </div>
                 <div class="block">
                     <?php
-                    $property->returned_message('Info/update'); ?>
+                    $property->returned_message('save'); ?>
                 </div>
-                <?php
-                $property->property_slider('attention-single'); ?>
+                <div class="block">
+                    <?php
+                    $property->update_property(); ?>
+                </div>
             </div>
         </div>
         <?php

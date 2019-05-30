@@ -1,8 +1,9 @@
 /**
  * Base
 **/
-@import "../../../global/assets/scss/owl-carousel/owl.carousel.scss";
-@import "../../../global/assets/scss/style.scss";
+@import "../../../global/assets/scss/owl-carousel/owl.carousel";
+@import "../../../global/assets/scss/jsCalendar";
+@import "../../../global/assets/scss/style";
 
 /**
  * Variables
@@ -11,6 +12,8 @@ $light-aqua: #6fa5a9;
 $aqua: #31929a;
 $red: #e11212;
 $yellow: #f5a623;
+$green: #417505;
+$purple: #ac92ec;
 
 $blue: #4a90e2;
 $dark-blue: #0059c2;
@@ -53,6 +56,11 @@ $text-darkest: #343434;
         border-radius: .25rem;
         border: 1px solid $gray;
         background-color: $light-gray;
+    }
+    &.btn-green {
+        color: white;
+        border-radius: .25rem;
+        background-color: $green;
     }
 }
 
@@ -974,6 +982,73 @@ $text-darkest: #343434;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+/**
+ * Update record
+**/
+#update-record {
+    border-radius: .5rem;
+    overflow: hidden;
+    .header {
+        padding: 2rem 3rem;
+        background-color: $red;
+        .heading {
+            margin: 0;
+            font-size: 2.5em;
+            color: white;
+            font-weight: $light;
+        }
+    }
+    .content {
+        padding: 2rem 3rem;
+        background-color: white;
+        .block {
+            border-bottom: 1px solid $gray;
+        }
+        .update {
+            padding-top: 3.5rem;
+            padding-bottom: 2rem;
+        }
+        .input {
+            border: 1px solid black;
+            padding: 1rem;
+            width: 30rem;
+            border-radius: .25rem;
+        }
+    }
+}
+
+/**
+ * jsCallendar
+**/
+.jsCalendar {
+    table {
+        border-radius: 0;
+        thead {
+            margin: 0;
+            .jsCalendar-title-row {
+                background-color: black;
+                .jsCalendar-title {
+                    display: flex;
+                    .jsCalendar-title-name {
+                        margin: 0 auto;
+                        color: white;
+                    }
+                }
+            }
+        }
+        tbody {
+            margin: 0;
+            line-height: 34px;
+            border: 1px solid transparetn;
+            .jsCalendar-current {
+                color: black;
+                border: 1px solid $purple;
+                background-color: transparent;
             }
         }
     }
