@@ -189,15 +189,14 @@ $(document).ready(function() {
             });
             // add to array
             map.markers.push(marker);
-            // if marker contains HTML, add it to an infoWindow
+            // if marker contains HTML
             if ($marker.html()) {
-                // create info window
-                var infowindow = new google.maps.InfoWindow({
-                    content: $marker.html()
-                });
-                // show info window when marker is clicked
                 google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.open(map, marker);
+                    var mapSidebar = $('#map-sidebar');
+                    mapSidebar.html($marker.html());
+                    if ( !mapSidebar.hasClass('active') ) {
+                        mapSidebar.addClass('active');
+                    }
                 });
             }
         }
@@ -224,6 +223,7 @@ $(document).ready(function() {
                 // fit to bounds
                 map.fitBounds(bounds);
             }
+            // Add a marker clusterer to manage the markers.
         }
         filterForm.find('.toggle-map').on('click', function() {
             $.get({
