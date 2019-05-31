@@ -274,6 +274,12 @@ $text-darkest: #343434;
     overflow-y: auto;
     padding: 5rem 2rem;
     background-color: #f5f7fa;
+    .main-content {
+        padding: .5rem 0;
+        .block {
+            padding: .5rem 0;
+        }
+    }
     &.home {
         .segment {
             padding: 1rem 0;
@@ -408,14 +414,6 @@ $text-darkest: #343434;
                         }
                     }
                 }
-            }
-        }
-    }
-    &.property-returned {
-        .main {
-            padding: .5rem 0;
-            .block {
-                padding: .5rem 0;
             }
         }
     }
@@ -1089,12 +1087,17 @@ $text-darkest: #343434;
 /**
  * Update record
 **/
-#update-record {
+.property-form {
     border-radius: .5rem;
     overflow: hidden;
     .header {
         padding: 2rem 3rem;
-        background-color: $red;
+        &.warning {
+            background-color: $red;
+        }
+        &.info {
+            background-color: $light-aqua;
+        }
         .heading {
             margin: 0;
             font-size: 2.5em;

@@ -4,30 +4,17 @@ include_once('modules/sidebar.php');
 include_once('partials/property.php');
 include_once('modules/footer.php');
 
-$header = new Header('Property return CP');
+$header = new Header('Submit vacancy');
 $property = new Property; ?>
 <div id="dashboar-wrapper" class="registered-provider">
     <?php
     $sidebar = new Sidebar; ?>
     <div id="dashboard" class="property-returned">
         <div class="container">
-            <div class="header">
-                <?php
-                $property->filter('attention');
-                $property->breadcrumbs(); ?>
-            </div>
             <div class="main-content">
                 <div class="block">
                     <?php
-                    $property->returned_info(); ?>
-                </div>
-                <div class="block">
-                    <?php
-                    $property->returned_message('save'); ?>
-                </div>
-                <div class="block">
-                    <?php
-                    $property->property_form('update'); ?>
+                    $property->property_form('new'); ?>
                 </div>
             </div>
         </div>

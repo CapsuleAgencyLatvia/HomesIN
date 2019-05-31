@@ -57,12 +57,35 @@ class Property {
     }
 
     /**
-     * Update property
+     * Vacancy submited
     **/
-    function update_property() { ?>
-        <div id="update-record">
-            <div class="header">
-                <h3 class="heading">Update record</h3>
+    function submited() { ?>
+        <div id="submited">
+            
+        </div>
+        <?php
+    }
+
+    /**
+     * Update or create Vacancy
+    **/
+    function property_form($type) {
+        switch ($type) :
+            case 'new':
+                $id = "create-record";
+                $class = "info";
+                $text = "Submit Vacancy";
+            break;
+
+            case 'update':
+                $id = "update-record";
+                $class = "warning";
+                $text = "Update record";
+            break;
+        endswitch; ?>
+        <div id="<?php echo $id; ?>" class="property-form">
+            <div class="header <?php echo $class; ?>">
+                <h3 class="heading"><?php echo $text; ?></h3>
             </div>
             <form class="content">
                 <div class="block location">
