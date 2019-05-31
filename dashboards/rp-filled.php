@@ -18,7 +18,7 @@ $property = new Property; ?>
                 $property->breadcrumbs();
                 $property->refine(); ?>
             </div>
-            <div class="main">
+            <div class="main-content">
                 <?php
                 for ($i=0; $i < 3; $i++) :
                     $property->grid($type);

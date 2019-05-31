@@ -309,8 +309,8 @@ class Property {
                         </div>
                         <div class="col">
                             <div class="filter-wrapper">
-                                <button class="icon">
-                                    <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                                <button class="icon toggle-map">
+                                    <img class="lazy" data-src="/global/assets/img/marker.svg" alt="">
                                 </button>
                                 <div class="overlay">
 

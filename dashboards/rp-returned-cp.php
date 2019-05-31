@@ -16,7 +16,7 @@ $property = new Property; ?>
                 $property->filter('attention');
                 $property->breadcrumbs(); ?>
             </div>
-            <div class="main">
+            <div class="main-content">
                 <div class="block">
                     <?php
                     $property->returned_info(); ?>

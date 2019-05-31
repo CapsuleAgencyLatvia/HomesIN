@@ -16,7 +16,7 @@ $property = new Property; ?>
                 $property->filter('attention');
                 $property->breadcrumbs(); ?>
             </div>
-            <div class="main">
+            <div class="main-content">
                 <?php
                 $property->property_slider('sent'); ?>
             </div>

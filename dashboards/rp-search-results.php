@@ -18,7 +18,7 @@ $property = new Property; ?>
                 $property->search_form();
                 $property->refine(); ?>
             </div>
-            <div class="main">
+            <div class="main-content">
                 <div class="properties">
                     <?php
                     for ($i=0; $i < 3; $i++) :

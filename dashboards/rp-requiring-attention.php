@@ -16,7 +16,7 @@ $property = new Property; ?>
                 $property->filter('attention');
                 $property->refine(); ?>
             </div>
-            <div class="main">
+            <div class="main-content">
                 <div class="properties">
                     <?php
                     for ($i=0; $i < 3; $i++) :
