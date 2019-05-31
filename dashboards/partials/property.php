@@ -292,7 +292,7 @@ class Property {
                         </a>
                     </li>
                 </ul>
-                <form class="form" action="">
+                <div class="form" action="">
                     <div class="flexbox vc">
                         <div class="col">
                             <p class="heading">Filters</p>
@@ -319,16 +319,73 @@ class Property {
                         </div>
                         <div class="col">
                             <div class="filter-wrapper">
-                                <button class="icon">
-                                    <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                                <button class="toggle-filter-overlay">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
                                 </button>
-                                <div class="overlay">
-
-                                </div>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
+            </div>
+            <div id="filter-overlay" class="property-filters">
+                <div class="wrapper">
+                    <form class="filter-form" action="index.html" method="post">
+                        <div class="header">
+                            <h3 class="heading">Location - <span>Barnet</span></h3>
+                            <select class="select change" name="location">
+                                <option value="">Change location</option>
+                                <option value="">Location</option>
+                            </select>
+                        </div>
+                        <?php
+                        $blocks = array(
+                            array(
+                                'title' => 'Property Type',
+                                'options' => array('Houses', 'Flats')
+                            ),
+                            array(
+                                'title' => 'Number of Bedrooms',
+                                'options' => array('3', '5')
+                            ),
+                            array(
+                                'title' => 'Features',
+                                'options' => array('Garden', 'Balcony')
+                            ),
+                            array(
+                                'title' => 'Rating',
+                                'options' => array('5 stars', '4 stars')
+                            ),
+                            array(
+                                'title' => 'Search radius',
+                                'options' => array('This area only')
+                            ),
+                            array(
+                                'title' => 'Price range',
+                                'options' => array('£50 - £100', '£100 - £200')
+                            )
+                        ); ?>
+                        <div class="filters flexbox">
+                            <?php
+                            foreach ( $blocks as $block ) : ?>
+                                <div class="col col-33">
+                                    <div class="filter">
+                                        <p><?php echo $block['title']; ?></p>
+                                        <select class="input" name="">
+                                            <?php
+                                            foreach ( $block['options'] as $option ) : ?>
+                                                <option value=""><?php echo $option; ?></option>
+                                                <?php
+                                            endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <?php
+                            endforeach; ?>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <?php

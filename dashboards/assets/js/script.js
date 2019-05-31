@@ -129,6 +129,25 @@ $(document).ready(function() {
     });
 
     /**
+     * Filter overlay
+    **/
+    var filterForm = $("#filter-form");
+    var filterOverlay = $("#filter-overlay");
+    if ( filterForm.length ) {
+        filterForm.find('.toggle-filter-overlay').on('click', function(){
+            $(this).toggleClass('active');
+            filterOverlay.fadeToggle();
+        });
+        $(document).mouseup(function(e){
+            if (!filterForm.is(e.target) && filterForm.has(e.target).length === 0) {
+                filterForm.find('.toggle-filter-overlay').removeClass('active');
+                filterOverlay.fadeOut();
+            }
+        });
+    }
+
+
+    /**
      * Refine properies
     **/
     var refine = $('#refine');

@@ -1,4 +1,4 @@
-<div id="search-overlay">
+<div id="search-overlay" class="property-filters">
     <div class="close-wrapper">
         <button class="close">
             <img src="/global/assets/img/cross.svg" alt="">
@@ -6,7 +6,7 @@
     </div>
     <div class="wrapper">
         <div class="container">
-            <form class="search-form property-filters" action="/dashboards/rp-search-results.php">
+            <form class="search-form" action="/dashboards/rp-search-results.php">
                 <h3 class="heading">Location - <span>None Specified</span></h3>
                 <div class="field-wrapper">
                     <input class="input" type="text" name="search" value="" placeholder="Postcode / Local Authority">
