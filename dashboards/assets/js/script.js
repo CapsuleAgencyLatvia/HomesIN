@@ -252,6 +252,16 @@ $(document).ready(function() {
             }
         });
     }
+
+    /**
+     * Messaging refine
+    **/
+    var messagingRefine = $('#message-header .refine-wrapper');
+    if ( messagingRefine.length ) {
+        messagingRefine.find('.refine').on('click', function(){
+            $(this).next('.dropdown').toggleClass('active');
+        });
+    }
 });
 
 /**

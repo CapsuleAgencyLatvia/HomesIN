@@ -61,7 +61,35 @@ class Property {
     **/
     function submited() { ?>
         <div id="submited">
-            
+            <div class="header">
+                <h3 class="heading">Vacancy submited to CP</h3>
+            </div>
+            <hr>
+            <div class="inner">
+                <p class="person">Care provider HCPA</p>
+                <p class="location">Mudells Campus, Ridgeway, Welwyn Garden City AL7 1FT</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a class="btn btn-yellow btn-small" href="#">Property</a>
+            </div>
+        </div>
+        <?php
+    }
+
+    /**
+     * Submit another
+    **/
+    function add_another() { ?>
+        <div id="add-another">
+            <div class="flexbox hsb vc">
+                <div class="col col-6">
+                    <p class="upper-heading">Lorem ipsum dolor</p>
+                    <p class="heading">Add another property</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col">
+                    <a class="btn btn-gray btn-small" href="#">Add another property</a>
+                </div>
+            </div>
         </div>
         <?php
     }
