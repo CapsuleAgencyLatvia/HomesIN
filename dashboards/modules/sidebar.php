@@ -25,9 +25,9 @@ class Sidebar {
                     array('title' => 'Vacancies Shared','url' => ''),
                 )),
                 array('heading' => 'Messages/Notifications', 'items' => array(
-                    array('title' => 'From care providers','url' => '/dashboards/re-inbox.php'),
-                    array('title' => 'From local authorities','url' => '/dashboards/re-inbox.php'),
-                    array('title' => 'From incomplete CSV','url' => '/dashboards/re-inbox.php'),
+                    array('title' => 'From care providers','url' => '/dashboards/rp-inbox.php'),
+                    array('title' => 'From local authorities','url' => '/dashboards/rp-inbox.php'),
+                    array('title' => 'From incomplete CSV','url' => '/dashboards/rp-inbox.php'),
                 )),
                 array('heading' => 'Settings', 'items' => array(
                     array('title' => 'Your Profile','url' => ''),
