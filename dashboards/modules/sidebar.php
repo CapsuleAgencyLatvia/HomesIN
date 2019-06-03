@@ -18,16 +18,16 @@ class Sidebar {
                     array('title' => 'Vacancies Filled','url' => '/dashboards/rp-filled.php'),
                     array('title' => 'In Progress','url' => '/dashboards/rp-in-progress.php'),
                     array('title' => 'Requiring Attention','url' => '/dashboards/rp-requiring-attention.php'),
-                    array('title' => 'Submit new Vacancy','url' => ''),
+                    array('title' => 'Submit new Vacancy','url' => '/dashboards/rp-submit-vacancy.php'),
                     array('title' => 'Bulk Upload','url' => ''),
                 )),
                 array('heading' => 'KPI Business', 'items' => array(
                     array('title' => 'Vacancies Shared','url' => ''),
                 )),
                 array('heading' => 'Messages/Notifications', 'items' => array(
-                    array('title' => 'From care providers','url' => ''),
-                    array('title' => 'From local authorities','url' => ''),
-                    array('title' => 'From incomplete CSV','url' => ''),
+                    array('title' => 'From care providers','url' => '/dashboards/re-inbox.php'),
+                    array('title' => 'From local authorities','url' => '/dashboards/re-inbox.php'),
+                    array('title' => 'From incomplete CSV','url' => '/dashboards/re-inbox.php'),
                 )),
                 array('heading' => 'Settings', 'items' => array(
                     array('title' => 'Your Profile','url' => ''),
