@@ -87,7 +87,7 @@ class Property {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <div class="col">
-                    <a class="btn btn-gray btn-small" href="#">Add another property</a>
+                    <a class="btn btn-gray btn-small" href="/dashboards/rp-submit-vacancy.php">Add another property</a>
                 </div>
             </div>
         </div>
@@ -517,9 +517,9 @@ class Property {
 
             case "attention-single": ?>
                 <div class="message-wrapper">
-                    <img class="warning lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                    <img class="warning icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                     <div class="icon-group attention">
-                        <img class="warning lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                        <img class="warning icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
                         <div class="message">
                             <p class="person">Care provider</p>
                             <p class="reason">Says unsuitable</p>
@@ -575,7 +575,7 @@ class Property {
                             <h3 class="title">2 Bedroom Semi-Detached</h3>
                             <p class="distance"><span class="val">0.42</span> Miles from station</p>
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
-                            <a class="btn btn-small btn-gray" href="">View More</a>
+                            <a class="btn btn-small btn-gray" href="/dashboards/rp-returned-cp.php">View More</a>
                         </div>
                     </div>
                 </div>

@@ -61,7 +61,7 @@ class Messaging {
                     <p class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="col">
-                    <a class="btn btn-small btn-gray" href="#">View</a>
+                    <a class="btn btn-small btn-gray" href="/dashboards/rp-message.php">View</a>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@ class Messaging {
                     <p class="message">The <span class="user-type">CP</span> upload has returned this property as unsuitable</p>
                 </div>
                 <div class="col m-left">
-                    <a class="btn btn-gray" href="#">Back to messages</a>
+                    <a class="btn btn-gray" href="/dashboards/rp-inbox.php">Back to messages</a>
                 </div>
             </div>
         </div>
