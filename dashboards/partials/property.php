@@ -647,5 +647,71 @@ class Property {
         </article>
         <?php
     }
+
+    function la_property_slider () { ?>
+        <article class="property-wrapper property-slider">
+            <div class="block">
+                <div class="property">
+                    <div class="flexbox-full">
+                        <div class="col col-5">
+                            <div class="slider-wrapper owl-carousel">
+                                <?php
+                                for ($i=0; $i < 10; $i++) : ?>
+                                    <div class="slide" data-hash="slide-<?php echo $i; ?>">
+                                        <img class="owl-lazy" data-src="/global/assets/img/image-placeholder.svg" alt="">
+                                    </div>
+                                    <?php
+                                endfor; ?>
+                            </div>
+                        </div>
+                        <div class="col col-5">
+                            <div class="content">
+                                <div class="overlay">
+                                    <?php
+                                    //$this->vacancy_type($type); ?>
+                                </div>
+                                <p class="location">Upper Tooting Park, London, SW17</p>
+                                <h3 class="title">2 Bedroom Semi-Detached</h3>
+                                <p class="distance"><span class="val">0.42</span> Miles from station</p>
+                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="footer flexbox-full">
+                    <div class="col col-5">
+                        <div class="thumbnails">
+                            <div class="owl-carousel">
+                                <?php
+                                for ($i=0; $i < 10; $i++) : ?>
+                                    <a href="#slide-<?php echo $i; ?>" class="thumbnail">
+                                        <img src="/global/assets/img/image-placeholder.svg" alt="">
+                                    </a>
+                                    <?php
+                                endfor; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-5">
+                        <div class="information">
+                            <div class="wrapper la">
+                                <div class="btn-wrap">
+                                    <p>Place Teneat</p>
+                                    <a class="btn btn-yellow btn-small" href="#">Place</a>
+                                </div>
+                                <div class="btn-wrap">
+                                    <p>Reject property</p>
+                                    <a class="btn btn-yellow btn-small" href="#">Reject</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <?php
+    }
 }
 ?>

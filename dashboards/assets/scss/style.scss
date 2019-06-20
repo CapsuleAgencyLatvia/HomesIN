@@ -8,7 +8,6 @@
 /**
  * Variables
 **/
-$light-aqua: #6fa5a9;
 $aqua: #31929a;
 $red: #e11212;
 $yellow: #f5a623;
@@ -17,6 +16,7 @@ $light-green: #7ed321;
 $green: #417505;
 
 $purple: #ac92ec;
+$dark-purple: #541663;
 
 $blue: #4a90e2;
 $dark-blue: #0059c2;
@@ -41,6 +41,10 @@ $text-darkest: #343434;
     &.btn-small {
         font-size: .6em;
         padding: .75rem 2rem;
+    }
+    &.btn-medium {
+        font-size: .8em;
+        padding: .75rem 1.5rem;
     }
     &.btn-blue {
         font-size: .8em;
@@ -197,9 +201,21 @@ $text-darkest: #343434;
 **/
 .registered-provider {
     #sidebar {
-        background-color: $aqua;
         .user-type {
-            background-color: $light-aqua;
+            background-color: rgba($aqua, .5);
+        }
+        .sidebar-block {
+            background-color: $aqua;
+        }
+    }
+}
+.local-authority {
+    #sidebar {
+        .user-type {
+            background-color: rgba($dark-purple, .5);
+        }
+        .sidebar-block {
+            background-color: $dark-purple;
         }
     }
 }
@@ -1065,6 +1081,19 @@ $text-darkest: #343434;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    &.la {
+                        justify-content: flex-start;
+                    }
+                    .btn-wrap {
+                        padding: 0 .5rem;
+                        p {
+                            margin: 0;
+                            color: $blue;
+                            font-size: .9em;
+                            font-weight: $medium;
+                            padding-bottom: .25rem;
+                        }
+                    }
                     .info {
                         font-size: .8em;
                         p {
@@ -1096,7 +1125,7 @@ $text-darkest: #343434;
             background-color: $red;
         }
         &.info {
-            background-color: $light-aqua;
+            background-color: $aqua;
         }
         .heading {
             margin: 0;
@@ -1472,6 +1501,161 @@ $text-darkest: #343434;
                 color: black;
                 border: 1px solid $purple;
                 background-color: transparent;
+            }
+        }
+    }
+}
+
+/**
+ * Properties in grid
+**/
+.properties-grid {
+    .property-ingrid {
+        overflow: hidden;
+        border-radius: .25rem;
+        .top {
+            position: relative;
+            .status {
+                position: absolute;
+                z-index: 1;
+                top: 1rem;
+                left: 1rem;
+                background-color: $light-green;
+                padding: .25rem 1.25rem;
+                p {
+                    margin: 0;
+                    color: white;
+                }
+            }
+            .trafic-light {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: .25rem;
+                background-color: black;
+                border-radius: .25rem;
+                .light {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    border-radius: 50%;
+                    background-color: $text;
+                    &:nth-child(2) {
+                        margin: .25rem 0;
+                    }
+                }
+            }
+            .image {
+                width: 100%;
+                height: 15rem;
+                object-fit: cover;
+            }
+        }
+        .bottom {
+            padding: 1rem;
+            background-color: white;
+            border: 1-x solid $light-gray;
+            p {
+                margin: 0;
+            }
+            .location {
+                font-size: .8em;
+                color: $text-dark;
+                font-weight: $medium;
+            }
+            .heading {
+                font-weight: $medium;
+                margin: 0;
+                padding: .5rem 0;
+            }
+            .distance {
+                color: $blue;
+                font-size: .8em;
+                font-weight: $medium;
+                padding-bottom: .5rem;
+            }
+            .description {
+                font-size: .9em;
+                color: $text-dark;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+/**
+ * Properties list
+**/
+.properties-list {
+    .property-block-wrapper {
+        padding: .5rem 0;
+        .property-block {
+            border-radius: .25rem;
+            overflow: hidden;
+            background-color: white;
+            .left {
+                position: relative;
+                .status {
+                    position: absolute;
+                    z-index: 1;
+                    top: 1rem;
+                    left: 1rem;
+                    padding: .5rem 1rem;
+                    background-color: $light-green;
+                    p {
+                        color: white;
+                        margin: 0;
+                    }
+                }
+                .trafic-light {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    right: 0;
+                    padding: .25rem;
+                    overflow: hidden;
+                    border-radius: .25rem;
+                    background-color: black;
+                    .light {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        margin: .25rem 0;
+                        border-radius: 50%;
+                        background-color: $text-dark;
+                    }
+                }
+                .image {
+                    width: 100%;
+                    height: 20vmax;
+                    object-fit: cover;
+                }
+            }
+            .right {
+                padding: 2rem 3rem;
+                p {
+                    margin: 0;
+                }
+                .location {
+                    color: $text;
+                    font-size: .9em;
+                    font-weight: $medium;
+                }
+                .heading {
+                    font-size: 1.25em;
+                    font-weight: $medium;
+                    margin: 0;
+                    padding: 1rem 0;
+                }
+                .distance {
+                    color: $blue;
+                    font-size: .9em;
+                    font-weight: $medium;
+                }
+                .description {
+                    padding: 1rem 0;
+                    font-size: .9em;
+                    color: $text-dark;
+                    line-height: 1.5;
+                }
             }
         }
     }
