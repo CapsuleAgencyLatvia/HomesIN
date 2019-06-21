@@ -17,6 +17,50 @@ class Property {
         <?php
     }
 
+
+    function la_property_inlist($class) { ?>
+        <div class="property-block-wrapper">
+            <div class="property-block flexbox-full">
+                <div class="col col-5">
+                    <div class="left">
+                        <div class="status <?php echo $class; ?>">
+                            <?php
+                            switch ($class) :
+                                case 'new':
+                                    $text = "New";
+                                break;
+                                case 'filled':
+                                    $text = "Filled";
+                                break;
+                                case "rejected":
+                                    $text = "Rejected";
+                                break;
+                            endswitch; ?>
+                            <p><?php echo $text; ?></p>
+                        </div>
+                        <div class="trafic-light <?php echo $class; ?>">
+                            <div class="light"></div>
+                            <div class="light"></div>
+                            <div class="light"></div>
+                        </div>
+                        <img class="image lazy" data-src="/global/assets/img/image-placeholder.svg" alt="Image">
+                    </div>
+                </div>
+                <div class="col col-5">
+                    <div class="right">
+                        <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                        <p class="location">Upper Tooting Park, London, SW17</p>
+                        <h3 class="heading">2 Bedroom Semi-Detached</h3>
+                        <p class="distance">0.42 Miles from station</p>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a class="btn btn-gray btn-medium" href="#">View more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
     /**
      * Returned message
     **/

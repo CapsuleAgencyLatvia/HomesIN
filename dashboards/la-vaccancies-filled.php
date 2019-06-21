@@ -4,7 +4,7 @@ include_once('modules/sidebar.php');
 include_once('partials/property.php');
 include_once('modules/footer.php');
 $property = new Property;
-$header = new Header('Vacancies aviable'); ?>
+$header = new Header('Vacancies filled'); ?>
 <div id="dashboar-wrapper" class="local-authority">
     <?php
     $sidebar = new Sidebar; ?>
@@ -18,7 +18,7 @@ $header = new Header('Vacancies aviable'); ?>
             <section class="properties-list">
                 <?php
                 for ($i=0; $i < 3; $i++) {
-                    $property->la_property_inlist('new');
+                    $property->la_property_inlist('filled');
                 } ?>
             </section>
         </div>
