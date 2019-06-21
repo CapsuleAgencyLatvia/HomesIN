@@ -38,6 +38,7 @@ $text-darkest: #343434;
     display: inline-block;
     padding: 1rem 3rem;
     text-transform: uppercase;
+    transition: all .3s ease;
     &.btn-small {
         font-size: .6em;
         padding: .75rem 2rem;
@@ -45,6 +46,14 @@ $text-darkest: #343434;
     &.btn-medium {
         font-size: .8em;
         padding: .75rem 1.5rem;
+    }
+    &.btn-black {
+        color: white;
+        border-radius: .5rem;
+        background-color: black;
+        &:hover {
+            background-color: $blue;
+        }
     }
     &.btn-blue {
         font-size: .8em;
@@ -145,7 +154,6 @@ $text-darkest: #343434;
                 height: 1.25rem;
             }
             p {
-                margin: 0;
                 font-size: .9em;
                 padding-left: .5rem;
                 font-weight: $light;
@@ -238,7 +246,6 @@ $text-darkest: #343434;
         text-align: center;
         p {
             font-weight: $regular;
-            margin: 0;
         }
     }
     .sidebar-block {
@@ -252,11 +259,6 @@ $text-darkest: #343434;
             p,
             span {
                 padding-left: .5rem;
-            }
-        }
-        .head {
-            p {
-                margin: 0;
             }
         }
         .menu {
@@ -303,7 +305,6 @@ $text-darkest: #343434;
                 .heading {
                     font-size: 1em;
                     font-weight: $light;
-                    margin: 0;
                 }
                 .select {
                     font-size: .7em;
@@ -339,7 +340,6 @@ $text-darkest: #343434;
                     .center {
                         padding: 2rem 0;
                         .data {
-                            margin: 0;
                             font-size: 2em;
                             padding-bottom: .25rem;
                         }
@@ -353,7 +353,6 @@ $text-darkest: #343434;
                             p {
                                 padding-left: .25rem;
                                 font-size: .9em;
-                                margin: 0;
                             }
                             &.positive {
                                 color: $aqua;
@@ -371,7 +370,6 @@ $text-darkest: #343434;
                         }
                     }
                     .heading {
-                        margin: 0;
                         color: $text;
                         font-size: .8em;
                         font-weight: $light;
@@ -392,9 +390,6 @@ $text-darkest: #343434;
                         align-items: center;
                         justify-content: space-between;
                         border-bottom: 1px solid $lightest-gray;
-                        p {
-                            margin: 0;
-                        }
                         .heading {
 
                         }
@@ -487,7 +482,6 @@ $text-darkest: #343434;
             .heading {
                 font-size: 2.5em;
                 font-weight: $light;
-                margin: 0;
                 padding-bottom: .5rem;
             }
             .select {
@@ -524,7 +518,6 @@ $text-darkest: #343434;
             background-color: $gray;
             p {
                 font-weight: $medium;
-                margin: 0;
                 padding-bottom: 1rem;
             }
             .input {
@@ -634,7 +627,6 @@ $text-darkest: #343434;
             }
         }
         .heading {
-            margin: 0;
             padding-right: 1.75rem;
         }
         .filter-wrapper {
@@ -714,9 +706,6 @@ $text-darkest: #343434;
         display: flex;
         align-items: center;
         margin: 0 -.5rem;
-        p {
-            margin: 0;
-        }
         .breadcrumb {
             padding: 0 .5rem;
             &.main {
@@ -777,7 +766,6 @@ $text-darkest: #343434;
             .heading {
                 color: $text;
                 font-size: .6em;
-                margin: 0;
                 padding-bottom: 1.25rem;
             }
             .choices {
@@ -843,9 +831,6 @@ $text-darkest: #343434;
     background-color: white;
     border: 1px solid gray;
     padding: 1.5rem 2.5rem;
-    p {
-        margin: 0;
-    }
     .heading {
         color: black;
         font-size: 1.25em;
@@ -856,7 +841,6 @@ $text-darkest: #343434;
         font-size: 1.25em;
         padding-bottom: .75rem;
         color: $text-dark;
-        margin: 0;
     }
     .location {
         font-size: .9em;
@@ -901,23 +885,19 @@ $text-darkest: #343434;
                 color: $text-dark;
                 font-size: .8em;
                 font-weight: $medium;
-                margin: 0;
             }
             .title {
                 font-size: 1.25em;
                 font-weight: $medium;
                 padding: .75rem 0;
-                margin: 0;
             }
             .distance {
                 color: $blue;
                 font-size: .8em;
                 font-weight: $medium;
-                margin: 0;
             }
             .description {
                 padding: 1rem 0;
-                margin: 0;
                 font-size: .8em;
                 color: $text-dark;
                 line-height: 1.5;
@@ -990,7 +970,6 @@ $text-darkest: #343434;
                             p {
                                 letter-spacing: 2px;
                                 text-transform: uppercase;
-                                margin: 0;
                                 &:first-child {
                                     padding-bottom: .25rem;
                                 }
@@ -1087,7 +1066,6 @@ $text-darkest: #343434;
                     .btn-wrap {
                         padding: 0 .5rem;
                         p {
-                            margin: 0;
                             color: $blue;
                             font-size: .9em;
                             font-weight: $medium;
@@ -1096,9 +1074,6 @@ $text-darkest: #343434;
                     }
                     .info {
                         font-size: .8em;
-                        p {
-                            margin: 0;
-                        }
                         .person {
                             color: $blue;
                             font-weight: $medium;
@@ -1128,7 +1103,6 @@ $text-darkest: #343434;
             background-color: $aqua;
         }
         .heading {
-            margin: 0;
             font-size: 2.5em;
             color: white;
             font-weight: $light;
@@ -1201,7 +1175,6 @@ $text-darkest: #343434;
     background-color: white;
     .header {
         .heading {
-            margin: 0;
             font-size: 2em;
             font-weight: $regular;
         }
@@ -1215,14 +1188,12 @@ $text-darkest: #343434;
     .inner {
         .person {
             font-size: .8em;
-            margin: 0;
             color: $blue;
             font-weight: $medium;
             text-transform: uppercase;
         }
         .location {
             color: $text-dark;
-            margin: 0;
             font-size: 1.5em;
             padding-top: .5rem;
             padding-bottom: 1rem;
@@ -1231,7 +1202,6 @@ $text-darkest: #343434;
             font-size: .8em;
             line-height: 1.5;
             color: $text-dark;
-            margin: 0;
         }
         .btn {
             margin-top: 2rem;
@@ -1249,7 +1219,6 @@ $text-darkest: #343434;
     p {
         color: $text-dark;
         font-size: .8em;
-        margin: 0;
     }
     .upper-heading {
         font-weight: $medium;
@@ -1324,7 +1293,6 @@ $text-darkest: #343434;
                     padding-top: .25rem;
                     color: $text-dark;
                     font-size: .8em;
-                    margin: 0;
                 }
                 .menu {
                     margin: 0;
@@ -1351,6 +1319,73 @@ $text-darkest: #343434;
 }
 
 /**
+ * LA Tennant placed
+**/
+.tennant-message {
+    position: relative;
+    padding: 3rem;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: 0 0 .5rem 0 rgba($light-gray, .5);
+    .status-wrapper {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 1rem;
+        padding-right: 3rem;
+        border-radius: .5rem;
+        background-color: $light-green;
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            object-fit: contain;
+        }
+        p {
+            font-size: .8em;
+            text-transform: uppercase;
+            font-weight: $medium;
+            padding-left: .5rem;
+        }
+    }
+    .heading {
+        font-size: 3em;
+        font-weight: $light;
+    }
+    hr {
+        border: none;
+        height: 1px;
+        margin: 1rem 0;
+        background-color: $light-gray;
+    }
+    .full-name {
+        font-size: .9em;
+        color: $blue;
+        font-weight: $medium;
+    }
+    .location {
+        color: $text-dark;
+        font-size: 1.5em;
+    }
+    .message {
+        font-size: .8em;
+        color: $text-dark;
+        padding: 2rem 0;
+    }
+    .buttons {
+        display: flex;
+        align-items: center;
+        margin: 0 -1rem;
+        .button {
+            padding: 0 1rem;
+        }
+    }
+}
+
+/**
  * Message preview
 **/
 .message-preview {
@@ -1370,9 +1405,6 @@ $text-darkest: #343434;
         }
     }
     .info {
-        p {
-            margin: 0;
-        }
         .action {
             font-size: .9em;
             font-weight: $medium;
@@ -1381,7 +1413,6 @@ $text-darkest: #343434;
             }
         }
         .heading {
-            margin: 0;
             padding: .5rem 0;
             font-weight: $medium;
         }
@@ -1394,6 +1425,97 @@ $text-darkest: #343434;
         margin-left: 5%;
         color: $text-dark;
         line-height: 1.5;
+    }
+}
+
+/**
+ * LA reject property
+**/
+.reject-property-overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(black,.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        padding: 5rem;
+        overflow: hidden;
+        max-width: 50rem;
+        border-radius: .5rem;
+        background-color: white;
+        .close {
+            position: absolute;
+            z-index: 1;
+            top: 2rem;
+            left: 2rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 1rem 0 rgba(black,.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+                object-fit: contain;
+            }
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 1rem;
+            .icon {
+                width: 2.75rem;
+                height: 2.75rem;
+                margin: 0 auto;
+                object-fit: contain;
+            }
+            .heading {
+                font-size: 3em;
+                font-weight: $light;
+            }
+        }
+        .content {
+            .heading {
+                font-size: 1.25em;
+                font-weight: $bold;
+            }
+            .location {
+                font-size: 1.75em;
+            }
+            .message {
+                display: block;
+                width: 100%;
+                padding: 1rem;
+                outline: none;
+                margin: 2rem 0;
+                resize: vertical;
+                border-radius: .5rem;
+                color: $text-darkest;
+                border: 1px solid $text-darkest;
+                &::placeholder {
+                    color: currentColor;
+                }
+            }
+            .btn {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -1413,7 +1535,6 @@ $text-darkest: #343434;
         margin: 0 .5rem;
     }
     .message {
-        margin: 0;
         font-weight: $medium;
         .user-type {
             color: $red;
@@ -1433,9 +1554,6 @@ $text-darkest: #343434;
     padding: 2rem 3rem;
     border-radius: .5rem;
     background-color: white;
-    p {
-        margin: 0;
-    }
     .info {
         .user-type {
             font-size: 1.25em;
@@ -1445,7 +1563,6 @@ $text-darkest: #343434;
             font-size: 1.25em;
             color: $text-dark;
             padding: .5rem 0;
-            margin: 0;
         }
         .location {
             font-size: .9em;
@@ -1523,7 +1640,6 @@ $text-darkest: #343434;
                 background-color: $light-green;
                 padding: .25rem 1.25rem;
                 p {
-                    margin: 0;
                     color: white;
                 }
             }
@@ -1554,9 +1670,6 @@ $text-darkest: #343434;
             padding: 1rem;
             background-color: white;
             border: 1-x solid $light-gray;
-            p {
-                margin: 0;
-            }
             .location {
                 font-size: .8em;
                 color: $text-dark;
@@ -1564,7 +1677,6 @@ $text-darkest: #343434;
             }
             .heading {
                 font-weight: $medium;
-                margin: 0;
                 padding: .5rem 0;
             }
             .distance {
@@ -1603,7 +1715,6 @@ $text-darkest: #343434;
                     background-color: $light-green;
                     p {
                         color: white;
-                        margin: 0;
                     }
                 }
                 .trafic-light {
@@ -1631,9 +1742,6 @@ $text-darkest: #343434;
             }
             .right {
                 padding: 2rem 3rem;
-                p {
-                    margin: 0;
-                }
                 .location {
                     color: $text;
                     font-size: .9em;
@@ -1642,7 +1750,6 @@ $text-darkest: #343434;
                 .heading {
                     font-size: 1.25em;
                     font-weight: $medium;
-                    margin: 0;
                     padding: 1rem 0;
                 }
                 .distance {

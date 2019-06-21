@@ -703,7 +703,7 @@ class Property {
                                 </div>
                                 <div class="btn-wrap">
                                     <p>Reject property</p>
-                                    <a class="btn btn-yellow btn-small" href="#">Reject</a>
+                                    <a class="btn btn-yellow btn-small toggle-la-reject-property" href="#">Reject</a>
                                 </div>
                             </div>
                         </div>
