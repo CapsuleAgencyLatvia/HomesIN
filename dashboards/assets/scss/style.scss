@@ -590,6 +590,19 @@ $text-darkest: #343434;
 #filter-form {
     position: relative;
     border-bottom: 1px solid $light-gray;
+    &.small {
+        border: none;
+        .heading {
+            .title {
+                font-size: 3em;
+                font-weight: $light;
+            }
+        }
+        .form {
+            margin-left: auto;
+            border-bottom: 1px solid $light-gray;
+        }
+    }
     .nav-menu {
         display: flex;
         align-items: center;
@@ -1058,10 +1071,16 @@ $text-darkest: #343434;
                     border-radius: .5rem;
                     background-color: white;
                     display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
                     justify-content: space-between;
                     &.la {
                         justify-content: flex-start;
+                    }
+                    .full-name {
+                        color: $blue;
+                        width: 100%;
+                        font-weight: $medium;
                     }
                     .btn-wrap {
                         padding: 0 .5rem;
@@ -1081,6 +1100,41 @@ $text-darkest: #343434;
                         .location {
                             color: $text-dark;
                         }
+                    }
+                }
+            }
+        }
+        .reason-wrapper {
+            border: 1px solid $gray;
+            padding: 3rem;
+            border-radius: .5rem;
+            background-color: white;
+            .header {
+                padding-bottom: 2rem;
+                .heading {
+
+                }
+                .name {
+                    font-size: 1.25em;
+                    color: $text-light;
+                    font-weight: $bold;
+                }
+                .location {
+                    font-size: .8em;
+                    color: $text-light;
+                    font-weight: $medium;
+                }
+            }
+            .content {
+                .heading {
+                    padding-bottom: 1rem;
+                }
+                .message {
+                    padding: 1rem;
+                    border: 1px solid $gray;
+                    p {
+                        font-size: .8em;
+                        color: $text-dark;
                     }
                 }
             }
@@ -1721,6 +1775,9 @@ $text-darkest: #343434;
                     }
                     &.rejected {
                         background-color: $red;
+                    }
+                    &.upcoming {
+                        background-color: $yellow;
                     }
                     p {
                         color: white;

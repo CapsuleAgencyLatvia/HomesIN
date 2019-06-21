@@ -18,6 +18,81 @@ class Property {
     }
 
 
+    function la_property_slider_rejected() { ?>
+        <article class="property-wrapper property-slider">
+            <div class="block">
+                <div class="property">
+                    <div class="flexbox-full">
+                        <div class="col col-5">
+                            <div class="slider-wrapper owl-carousel">
+                                <?php
+                                for ($i=0; $i < 10; $i++) : ?>
+                                    <div class="slide" data-hash="slide-<?php echo $i; ?>">
+                                        <img class="owl-lazy" data-src="/global/assets/img/image-placeholder.svg" alt="">
+                                    </div>
+                                    <?php
+                                endfor; ?>
+                            </div>
+                        </div>
+                        <div class="col col-5">
+                            <div class="content">
+                                <div class="overlay">
+                                    <?php
+                                    //$this->vacancy_type($type); ?>
+                                </div>
+                                <p class="location">Upper Tooting Park, London, SW17</p>
+                                <h3 class="title">2 Bedroom Semi-Detached</h3>
+                                <p class="distance"><span class="val">0.42</span> Miles from station</p>
+                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="footer flexbox-full">
+                    <div class="col col-5">
+                        <div class="thumbnails">
+                            <div class="owl-carousel">
+                                <?php
+                                for ($i=0; $i < 10; $i++) : ?>
+                                    <a href="#slide-<?php echo $i; ?>" class="thumbnail">
+                                        <img src="/global/assets/img/image-placeholder.svg" alt="">
+                                    </a>
+                                    <?php
+                                endfor; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-5">
+                        <div class="information">
+                            <div class="wrapper la">
+                                <p class="full-name">John Smith</p>
+                                <p>ID Info</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="reason-wrapper">
+                    <div class="header">
+                        <h3 class="heading">Registered Provider: Your Property is not Viable</h3>
+                        <p class="name">2 Bedroom Semi-Detached</p>
+                        <p class="location">Upper Tooting park, London, SW17</p>
+                    </div>
+                    <div class="content">
+                        <h3 class="heading">Copy of Message Sent</h3>
+                        <div class="message">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <?php
+    }
+
     function la_property_inlist($class) { ?>
         <div class="property-block-wrapper">
             <div class="property-block flexbox-full">
@@ -29,6 +104,9 @@ class Property {
                                 case 'new':
                                     $text = "New";
                                 break;
+                                case 'upcoming':
+                                    $text = "Upcoming";
+                                break;
                                 case 'filled':
                                     $text = "Filled";
                                 break;
@@ -38,17 +116,25 @@ class Property {
                             endswitch; ?>
                             <p><?php echo $text; ?></p>
                         </div>
-                        <div class="trafic-light <?php echo $class; ?>">
-                            <div class="light"></div>
-                            <div class="light"></div>
-                            <div class="light"></div>
-                        </div>
+                        <?php
+                        if ( $class != 'upcoming' ) : ?>
+                            <div class="trafic-light <?php echo $class; ?>">
+                                <div class="light"></div>
+                                <div class="light"></div>
+                                <div class="light"></div>
+                            </div>
+                            <?php
+                        endif; ?>
                         <img class="image lazy" data-src="/global/assets/img/image-placeholder.svg" alt="Image">
                     </div>
                 </div>
                 <div class="col col-5">
                     <div class="right">
-                        <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                        <?php
+                        if ( $class != 'upcoming' ) : ?>
+                            <img class="icon lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                            <?php
+                        endif; ?>
                         <p class="location">Upper Tooting Park, London, SW17</p>
                         <h3 class="heading">2 Bedroom Semi-Detached</h3>
                         <p class="distance">0.42 Miles from station</p>
@@ -387,6 +473,111 @@ class Property {
                         </a>
                     </li>
                 </ul>
+                <div class="form" action="">
+                    <div class="flexbox vc">
+                        <div class="col">
+                            <p class="heading">Filters</p>
+                        </div>
+                        <div class="col">
+                            <div class="filter-wrapper">
+                                <button class="icon">
+                                    <img class="lazy" data-src="/global/assets/img/icon-placeholder-round.svg" alt="">
+                                </button>
+                                <div class="overlay">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="filter-wrapper">
+                                <button class="icon toggle-map">
+                                    <img class="lazy" data-src="/global/assets/img/marker.svg" alt="">
+                                </button>
+                                <div class="overlay">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="filter-wrapper">
+                                <button class="toggle-filter-overlay">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="filter-overlay" class="property-filters">
+                <div class="wrapper">
+                    <form class="filter-form" action="index.html" method="post">
+                        <div class="header">
+                            <h3 class="heading">Location - <span>Barnet</span></h3>
+                            <select class="select change" name="location">
+                                <option value="">Change location</option>
+                                <option value="">Location</option>
+                            </select>
+                        </div>
+                        <?php
+                        $blocks = array(
+                            array(
+                                'title' => 'Property Type',
+                                'options' => array('Houses', 'Flats')
+                            ),
+                            array(
+                                'title' => 'Number of Bedrooms',
+                                'options' => array('3', '5')
+                            ),
+                            array(
+                                'title' => 'Features',
+                                'options' => array('Garden', 'Balcony')
+                            ),
+                            array(
+                                'title' => 'Rating',
+                                'options' => array('5 stars', '4 stars')
+                            ),
+                            array(
+                                'title' => 'Search radius',
+                                'options' => array('This area only')
+                            ),
+                            array(
+                                'title' => 'Price range',
+                                'options' => array('£50 - £100', '£100 - £200')
+                            )
+                        ); ?>
+                        <div class="filters flexbox">
+                            <?php
+                            foreach ( $blocks as $block ) : ?>
+                                <div class="col col-33">
+                                    <div class="filter">
+                                        <p><?php echo $block['title']; ?></p>
+                                        <select class="input" name="">
+                                            <?php
+                                            foreach ( $block['options'] as $option ) : ?>
+                                                <option value=""><?php echo $option; ?></option>
+                                                <?php
+                                            endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <?php
+                            endforeach; ?>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    function filter_inpipe() { ?>
+        <div id="filter-form" class="small">
+            <div class="flexbox-full">
+                <div class="heading">
+                    <h1 class="title">Upcoming/In pipe Properties</h1>
+                </div>
                 <div class="form" action="">
                     <div class="flexbox vc">
                         <div class="col">
